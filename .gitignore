@@ -7,9 +7,8 @@ wheels/
 *.egg-info
 
 # Virtual environments
-.venv
 
-uploads
-logs
-chroma_db
-storages
+
+
+
+

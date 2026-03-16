@@ -1,0 +1,538 @@
+2026-03-10 22:45:05,535 - app - INFO - __init__.py:16 - 初始化数据库...
+2026-03-10 22:45:05,676 - app.utils.db - ERROR - db.py:80 - 初始化数据库失败:(pymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: NO)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-03-10 22:45:05,676 - app - WARNING - __init__.py:20 - 数据库初始化失败
+2026-03-10 22:45:06,786 - app.services.storage.local_storage - INFO - local_storage.py:20 - 本地存储初始化成功：目录：C:\SoftWare\BYSJ\34火灾知识问答库问答系统\smart_rag\storages
+2026-03-10 22:45:36,067 - app - INFO - __init__.py:16 - 初始化数据库...
+2026-03-10 22:45:36,076 - app.utils.db - ERROR - db.py:80 - 初始化数据库失败:(pymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: NO)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-03-10 22:45:36,076 - app - WARNING - __init__.py:20 - 数据库初始化失败
+2026-03-10 22:45:36,233 - app.services.storage.local_storage - INFO - local_storage.py:20 - 本地存储初始化成功：目录：C:\SoftWare\BYSJ\34火灾知识问答库问答系统\smart_rag\storages
+2026-03-10 22:45:42,902 - app.utils.db - ERROR - db.py:48 - 数据库会话错误:(pymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: NO)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-03-10 23:44:11,499 - app - INFO - __init__.py:16 - 初始化数据库...
+2026-03-10 23:44:11,592 - app.utils.db - ERROR - db.py:80 - 初始化数据库失败:(pymysql.err.OperationalError) (1049, "Unknown database 'rag'")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-03-10 23:44:11,592 - app - WARNING - __init__.py:20 - 数据库初始化失败
+2026-03-10 23:44:11,772 - app.services.storage.local_storage - INFO - local_storage.py:20 - 本地存储初始化成功：目录：C:\SoftWare\BYSJ\34火灾知识问答库问答系统\smart_rag\storages
+2026-03-10 23:44:18,416 - app.utils.db - ERROR - db.py:48 - 数据库会话错误:(pymysql.err.OperationalError) (1049, "Unknown database 'rag'")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-03-11 00:23:54,736 - app - INFO - __init__.py:16 - 初始化数据库...
+2026-03-11 00:23:55,268 - app - INFO - __init__.py:18 - 初始化数据库成功
+2026-03-11 00:23:55,484 - app.services.storage.local_storage - INFO - local_storage.py:20 - 本地存储初始化成功：目录：C:\SoftWare\BYSJ\34火灾知识问答库问答系统\smart_rag\storages
+2026-03-11 00:24:22,048 - sentence_transformers.SentenceTransformer - INFO - SentenceTransformer.py:227 - Load pretrained SentenceTransformer: C:/Users/chris/.cache/modelscope/hub/models/sentence-transformers/all-MiniLM-L6-v2
+2026-03-11 00:24:22,500 - app.utils.embedding_factory - INFO - embedding_factory.py:26 - 创建HuggingFaceEmbeddings:C:/Users/chris/.cache/modelscope/hub/models/sentence-transformers/all-MiniLM-L6-v2
+2026-03-11 00:24:22,500 - app.services.vectordb.chroma - INFO - chroma.py:17 - ChromaDB已经初始化，持久化目录为:./chroma_db
+2026-03-11 00:24:23,205 - app.utils.llm_factory - INFO - llm_factory.py:15 - 已经注册了LLM提供商:deepseek
+2026-03-11 00:24:23,205 - app.utils.llm_factory - INFO - llm_factory.py:15 - 已经注册了LLM提供商:openai
+2026-03-11 00:24:23,205 - app.utils.llm_factory - INFO - llm_factory.py:15 - 已经注册了LLM提供商:ollama
+2026-03-11 00:24:23,320 - py.warnings - WARNING - warnings.py:110 - C:\SoftWare\BYSJ\34火灾知识问答库问答系统\smart_rag\.venv\Lib\site-packages\jieba\__init__.py:44: SyntaxWarning: invalid escape sequence '\.'
+  re_han_default = re.compile("([\u4E00-\u9FD5a-zA-Z0-9+#&\._%\-]+)", re.U)
+
+2026-03-11 00:24:23,321 - py.warnings - WARNING - warnings.py:110 - C:\SoftWare\BYSJ\34火灾知识问答库问答系统\smart_rag\.venv\Lib\site-packages\jieba\__init__.py:46: SyntaxWarning: invalid escape sequence '\s'
+  re_skip_default = re.compile("(\r\n|\s)", re.U)
+
+2026-03-11 00:24:23,334 - py.warnings - WARNING - warnings.py:110 - C:\SoftWare\BYSJ\34火灾知识问答库问答系统\smart_rag\.venv\Lib\site-packages\jieba\finalseg\__init__.py:78: SyntaxWarning: invalid escape sequence '\.'
+  re_skip = re.compile("([a-zA-Z0-9]+(?:\.\d+)?%?)")
+
+2026-03-11 00:24:23,627 - py.warnings - WARNING - warnings.py:110 - C:\SoftWare\BYSJ\34火灾知识问答库问答系统\smart_rag\.venv\Lib\site-packages\jieba\_compat.py:18: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+
+2026-03-11 00:24:24,122 - __main__ - INFO - main.py:13 - 正在启动RAGLite服务器在0.0.0.0:5000
+2026-03-11 00:24:24,165 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.88.85:5000
+2026-03-11 00:24:24,165 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-03-11 00:24:24,382 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 00:24:24] "GET / HTTP/1.1" 200 -
+2026-03-11 00:24:25,953 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 00:24:25] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-11 00:24:37,484 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 00:24:37] "GET /login HTTP/1.1" 200 -
+2026-03-11 00:24:43,685 - app.utils.db - ERROR - db.py:48 - 数据库会话错误:此用户不存在
+2026-03-11 00:24:43,686 - app.blueprints.auth - ERROR - auth.py:56 - 登录失败:此用户不存在
+2026-03-11 00:24:43,687 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 00:24:43] "POST /login HTTP/1.1" 200 -
+2026-03-11 00:24:49,798 - app.utils.db - ERROR - db.py:48 - 数据库会话错误:此用户不存在
+2026-03-11 00:24:49,798 - app.blueprints.auth - ERROR - auth.py:56 - 登录失败:此用户不存在
+2026-03-11 00:24:49,799 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 00:24:49] "POST /login HTTP/1.1" 200 -
+2026-03-11 00:25:14,222 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 00:25:14] "GET /register HTTP/1.1" 200 -
+2026-03-11 00:25:30,060 - UserService - INFO - user_service.py:40 - 用户admin注册成功
+2026-03-11 00:25:30,070 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 00:25:30] "[32mPOST /register HTTP/1.1[0m" 302 -
+2026-03-11 00:25:30,347 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 00:25:30] "GET / HTTP/1.1" 200 -
+2026-03-11 00:25:34,898 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 00:25:34] "GET /login HTTP/1.1" 200 -
+2026-03-11 00:25:39,695 - UserService - INFO - user_service.py:57 - 用户admin登录成功
+2026-03-11 00:25:39,697 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 00:25:39] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-03-11 00:25:39,708 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 00:25:39] "GET / HTTP/1.1" 200 -
+2026-03-11 00:25:43,011 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 00:25:43] "GET /kb HTTP/1.1" 200 -
+2026-03-11 00:25:44,643 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 00:25:44] "GET /chat HTTP/1.1" 200 -
+2026-03-11 00:25:44,712 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 00:25:44] "GET /api/v1/sessions HTTP/1.1" 200 -
+2026-03-11 00:25:45,669 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 00:25:45] "GET /settings HTTP/1.1" 200 -
+2026-03-11 00:25:45,764 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 00:25:45] "GET /api/v1/settings/models HTTP/1.1" 200 -
+2026-03-11 00:25:45,924 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 00:25:45] "GET /api/v1/settings HTTP/1.1" 200 -
+2026-03-11 00:25:46,379 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 00:25:46] "GET / HTTP/1.1" 200 -
+2026-03-11 00:25:47,918 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 00:25:47] "GET /kb HTTP/1.1" 200 -
+2026-03-11 00:27:49,622 - app.blueprints.knowledgebase - INFO - knowledgebase.py:54 - 收到新的知识库的封面图片：文件名:P020250507619451391681.pdf,大小:1051356,内容类型:application/pdf
+2026-03-11 00:27:49,623 - app.blueprints.utils - WARNING - utils.py:25 - ValueError in api_create:不支持的图片格式:pdf,支持的格式为gif, jpg, png, webp, jpeg
+2026-03-11 00:27:49,624 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 00:27:49] "[31m[1mPOST /api/v1/kb HTTP/1.1[0m" 400 -
+2026-03-11 00:28:16,821 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 00:28:16] "GET / HTTP/1.1" 200 -
+2026-03-11 00:38:46,761 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 00:38:46] "GET / HTTP/1.1" 200 -
+2026-03-11 00:39:06,074 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 00:39:06] "GET /kb HTTP/1.1" 200 -
+2026-03-11 00:39:10,433 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 00:39:10] "GET /chat HTTP/1.1" 200 -
+2026-03-11 00:39:10,740 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 00:39:10] "GET /api/v1/sessions HTTP/1.1" 200 -
+2026-03-11 00:39:29,716 - ChatSessionService - INFO - chat_session_service.py:23 - 已经创建聊天会话:db7ee2b64fb04df99b7c09028b2bbd17,用户ID:915bc569fdef45a49cde434bb1e4d961
+2026-03-11 00:39:29,730 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 00:39:29] "POST /api/v1/sessions HTTP/1.1" 200 -
+2026-03-11 00:39:29,931 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 00:39:29] "GET /api/v1/sessions HTTP/1.1" 200 -
+2026-03-11 00:39:34,975 - app.utils.llm_factory - INFO - llm_factory.py:54 - 已经创建DeepSeek LLM:{model_name}
+2026-03-11 00:39:34,985 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 00:39:34] "POST /api/v1/chat HTTP/1.1" 200 -
+2026-03-11 00:39:35,066 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 00:39:35] "GET /api/v1/sessions HTTP/1.1" 200 -
+2026-03-11 00:39:35,459 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 00:39:53,937 - app.utils.llm_factory - INFO - llm_factory.py:54 - 已经创建DeepSeek LLM:{model_name}
+2026-03-11 00:39:53,938 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 00:39:53] "POST /api/v1/chat HTTP/1.1" 200 -
+2026-03-11 00:39:54,128 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 00:39:54] "GET /api/v1/sessions HTTP/1.1" 200 -
+2026-03-11 00:39:54,223 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 00:40:13,283 - app.utils.llm_factory - INFO - llm_factory.py:54 - 已经创建DeepSeek LLM:{model_name}
+2026-03-11 00:40:13,284 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 00:40:13] "POST /api/v1/chat HTTP/1.1" 200 -
+2026-03-11 00:40:13,499 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 00:40:13,605 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 00:40:13] "GET /api/v1/sessions HTTP/1.1" 200 -
+2026-03-11 00:40:18,868 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 00:40:18] "GET /settings HTTP/1.1" 200 -
+2026-03-11 00:40:18,956 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 00:40:18] "GET /api/v1/settings/models HTTP/1.1" 200 -
+2026-03-11 00:40:19,152 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 00:40:19] "GET /api/v1/settings HTTP/1.1" 200 -
+2026-03-11 00:40:32,047 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 00:40:32] "GET / HTTP/1.1" 200 -
+2026-03-11 00:40:40,621 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 00:40:40] "GET /kb HTTP/1.1" 200 -
+2026-03-11 00:41:45,132 - app.blueprints.knowledgebase - INFO - knowledgebase.py:54 - 收到新的知识库的封面图片：文件名:P020250507619451391681.docx,大小:845385,内容类型:application/vnd.openxmlformats-officedocument.wordprocessingml.document
+2026-03-11 00:41:45,134 - app.blueprints.utils - WARNING - utils.py:25 - ValueError in api_create:不支持的图片格式:docx,支持的格式为gif, jpg, png, webp, jpeg
+2026-03-11 00:41:45,136 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 00:41:45] "[31m[1mPOST /api/v1/kb HTTP/1.1[0m" 400 -
+2026-03-11 00:42:13,332 - app.blueprints.knowledgebase - INFO - knowledgebase.py:54 - 收到新的知识库的封面图片：文件名:P020250507619451391681.docx,大小:845385,内容类型:application/vnd.openxmlformats-officedocument.wordprocessingml.document
+2026-03-11 00:42:13,332 - app.blueprints.utils - WARNING - utils.py:25 - ValueError in api_create:不支持的图片格式:docx,支持的格式为gif, jpg, png, webp, jpeg
+2026-03-11 00:42:13,333 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 00:42:13] "[31m[1mPOST /api/v1/kb HTTP/1.1[0m" 400 -
+2026-03-11 00:45:24,906 - app.blueprints.knowledgebase - INFO - knowledgebase.py:54 - 收到新的知识库的封面图片：文件名:P020250507619451391681.txt,大小:76988,内容类型:text/plain
+2026-03-11 00:45:24,908 - app.blueprints.utils - WARNING - utils.py:25 - ValueError in api_create:不支持的图片格式:txt,支持的格式为gif, jpg, png, webp, jpeg
+2026-03-11 00:45:24,910 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 00:45:24] "[31m[1mPOST /api/v1/kb HTTP/1.1[0m" 400 -
+2026-03-11 15:41:01,392 - app - INFO - __init__.py:16 - 初始化数据库...
+2026-03-11 15:41:01,573 - app - INFO - __init__.py:18 - 初始化数据库成功
+2026-03-11 15:41:01,875 - app.services.storage.local_storage - INFO - local_storage.py:20 - 本地存储初始化成功：目录：C:\SoftWare\BYSJ\34火灾知识问答库问答系统\smart_rag\storages
+2026-03-11 15:41:14,794 - sentence_transformers.SentenceTransformer - INFO - SentenceTransformer.py:227 - Load pretrained SentenceTransformer: C:/Users/chris/.cache/modelscope/hub/models/sentence-transformers/all-MiniLM-L6-v2
+2026-03-11 15:41:15,144 - app.utils.embedding_factory - INFO - embedding_factory.py:26 - 创建HuggingFaceEmbeddings:C:/Users/chris/.cache/modelscope/hub/models/sentence-transformers/all-MiniLM-L6-v2
+2026-03-11 15:41:15,144 - app.services.vectordb.chroma - INFO - chroma.py:17 - ChromaDB已经初始化，持久化目录为:./chroma_db
+2026-03-11 15:41:15,335 - app.utils.llm_factory - INFO - llm_factory.py:15 - 已经注册了LLM提供商:deepseek
+2026-03-11 15:41:15,335 - app.utils.llm_factory - INFO - llm_factory.py:15 - 已经注册了LLM提供商:openai
+2026-03-11 15:41:15,335 - app.utils.llm_factory - INFO - llm_factory.py:15 - 已经注册了LLM提供商:ollama
+2026-03-11 15:41:15,454 - py.warnings - WARNING - warnings.py:110 - C:\SoftWare\BYSJ\34火灾知识问答库问答系统\smart_rag\.venv\Lib\site-packages\jieba\_compat.py:18: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+
+2026-03-11 15:41:15,637 - __main__ - INFO - main.py:13 - 正在启动RAGLite服务器在0.0.0.0:5000
+2026-03-11 15:41:15,657 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.88.85:5000
+2026-03-11 15:41:15,658 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-03-11 15:41:23,051 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 15:41:23] "GET / HTTP/1.1" 200 -
+2026-03-11 15:41:24,591 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 15:41:24] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-11 15:41:29,528 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 15:41:29] "GET /login HTTP/1.1" 200 -
+2026-03-11 15:41:34,683 - UserService - INFO - user_service.py:57 - 用户admin登录成功
+2026-03-11 15:41:34,686 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 15:41:34] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-03-11 15:41:34,700 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 15:41:34] "GET / HTTP/1.1" 200 -
+2026-03-11 15:41:38,296 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 15:41:38] "GET /kb HTTP/1.1" 200 -
+2026-03-11 15:41:49,076 - KnowledgebaseService - INFO - knowledgebase_service.py:68 - 创建知识库成功:ID:{kb.id}
+2026-03-11 15:41:49,083 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 15:41:49] "POST /api/v1/kb HTTP/1.1" 200 -
+2026-03-11 15:41:49,111 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 15:41:49] "GET /kb HTTP/1.1" 200 -
+2026-03-11 15:41:51,023 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 15:41:51] "GET /kb/9974e013d33a4a33bd2a3092740084d4 HTTP/1.1" 200 -
+2026-03-11 15:42:24,274 - app.services.storage.local_storage - INFO - local_storage.py:32 - 文件已经上传:documents/9974e013d33a4a33bd2a3092740084d4/0b553643727d4f5aac4e278c7e609d8e/陕西商洛“7·19”高速公路桥梁垮塌灾害调查评估报告.pdf
+2026-03-11 15:42:24,282 - DocumentService - INFO - document_service.py:62 - 文档上传成功:0b553643727d4f5aac4e278c7e609d8e
+2026-03-11 15:42:24,287 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 15:42:24] "POST /api/v1/knowledgebases/9974e013d33a4a33bd2a3092740084d4/documents HTTP/1.1" 200 -
+2026-03-11 15:42:24,323 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 15:42:24] "GET /kb/9974e013d33a4a33bd2a3092740084d4 HTTP/1.1" 200 -
+2026-03-11 15:42:30,004 - DocumentService - INFO - document_service.py:91 - 提交文档处理任务:0b553643727d4f5aac4e278c7e609d8e
+2026-03-11 15:42:30,005 - DocumentService - INFO - document_service.py:106 - 开始处理文档:0b553643727d4f5aac4e278c7e609d8e
+2026-03-11 15:42:30,006 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 15:42:30] "POST /api/v1/documents/0b553643727d4f5aac4e278c7e609d8e/process HTTP/1.1" 200 -
+2026-03-11 15:42:30,037 - DocumentService - INFO - document_service.py:152 - 文档0b553643727d4f5aac4e278c7e609d8e状态已经更新为processing状态了
+2026-03-11 15:42:30,039 - app.services.storage.local_storage - INFO - local_storage.py:47 - 文件已经下载成功:C:\SoftWare\BYSJ\34火灾知识问答库问答系统\smart_rag\storages\documents\9974e013d33a4a33bd2a3092740084d4\0b553643727d4f5aac4e278c7e609d8e\陕西商洛“7·19”高速公路桥梁垮塌灾害调查评估报告.pdf
+2026-03-11 15:42:33,875 - DocumentService - INFO - document_service.py:157 - 加载到39个文档
+2026-03-11 15:42:33,877 - DocumentService - INFO - document_service.py:168 - 加载到82个分块
+2026-03-11 15:42:33,970 - chromadb.telemetry.product.posthog - INFO - posthog.py:22 - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-03-11 15:42:34,449 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 15:42:34] "GET /kb/9974e013d33a4a33bd2a3092740084d4 HTTP/1.1" 200 -
+2026-03-11 15:42:37,833 - app.services.vectordb.chroma - INFO - chroma.py:35 - 已经向ChromDB集合kb_9974e013d33a4a33bd2a3092740084d4添加了82个文档
+2026-03-11 15:42:37,844 - DocumentService - INFO - document_service.py:199 - 文档0b553643727d4f5aac4e278c7e609d8e处理完成,分块数量为82
+2026-03-11 15:46:51,454 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 15:46:51] "GET /kb/9974e013d33a4a33bd2a3092740084d4 HTTP/1.1" 200 -
+2026-03-11 15:46:53,408 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 15:46:53] "GET /documents/0b553643727d4f5aac4e278c7e609d8e/chunks HTTP/1.1" 200 -
+2026-03-11 15:47:46,414 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 15:47:46] "GET /kb HTTP/1.1" 200 -
+2026-03-11 15:47:48,442 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 15:47:48] "GET /kb/9974e013d33a4a33bd2a3092740084d4 HTTP/1.1" 200 -
+2026-03-11 15:47:51,676 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 15:47:51] "GET / HTTP/1.1" 200 -
+2026-03-11 15:47:57,031 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 15:47:57] "GET /chat HTTP/1.1" 200 -
+2026-03-11 15:47:57,106 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 15:47:57] "GET /api/v1/sessions HTTP/1.1" 200 -
+2026-03-11 15:47:59,581 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 15:47:59] "GET /kb HTTP/1.1" 200 -
+2026-03-11 15:48:00,818 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 15:48:00] "GET /kb/9974e013d33a4a33bd2a3092740084d4 HTTP/1.1" 200 -
+2026-03-11 15:48:03,709 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 15:48:03] "GET /documents/0b553643727d4f5aac4e278c7e609d8e/chunks HTTP/1.1" 200 -
+2026-03-11 15:48:05,115 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 15:48:05] "GET / HTTP/1.1" 200 -
+2026-03-11 15:48:05,621 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 15:48:05] "GET /kb HTTP/1.1" 200 -
+2026-03-11 15:48:07,334 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 15:48:07] "GET / HTTP/1.1" 200 -
+2026-03-11 15:48:10,601 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 15:48:10] "GET /chat HTTP/1.1" 200 -
+2026-03-11 15:48:10,668 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 15:48:10] "GET /api/v1/sessions HTTP/1.1" 200 -
+2026-03-11 15:48:49,408 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 15:48:49] "GET /chat HTTP/1.1" 200 -
+2026-03-11 15:48:49,482 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 15:48:49] "GET /api/v1/sessions HTTP/1.1" 200 -
+2026-03-11 15:48:50,667 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 15:48:50] "GET /kb HTTP/1.1" 200 -
+2026-03-11 15:48:51,585 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 15:48:51] "GET / HTTP/1.1" 200 -
+2026-03-11 15:48:52,691 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 15:48:52] "GET /kb HTTP/1.1" 200 -
+2026-03-11 15:48:53,918 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 15:48:53] "GET /kb/9974e013d33a4a33bd2a3092740084d4 HTTP/1.1" 200 -
+2026-03-11 15:48:57,378 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 15:48:57] "GET / HTTP/1.1" 200 -
+2026-03-11 15:48:59,375 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 15:48:59] "GET /chat HTTP/1.1" 200 -
+2026-03-11 15:48:59,443 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 15:48:59] "GET /api/v1/sessions HTTP/1.1" 200 -
+2026-03-11 15:49:25,121 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 15:49:25] "GET /kb HTTP/1.1" 200 -
+2026-03-11 15:49:26,188 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 15:49:26] "GET /kb/9974e013d33a4a33bd2a3092740084d4 HTTP/1.1" 200 -
+2026-03-11 15:49:27,605 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 15:49:27] "GET /documents/0b553643727d4f5aac4e278c7e609d8e/chunks HTTP/1.1" 200 -
+2026-03-11 15:49:33,963 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 15:49:33] "GET / HTTP/1.1" 200 -
+2026-03-11 15:49:34,757 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 15:49:34] "GET /chat HTTP/1.1" 200 -
+2026-03-11 15:49:34,832 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 15:49:34] "GET /api/v1/sessions HTTP/1.1" 200 -
+2026-03-11 15:49:48,700 - ChatSessionService - INFO - chat_session_service.py:23 - 已经创建聊天会话:58b21ba48c69445293612728ada38444,用户ID:915bc569fdef45a49cde434bb1e4d961
+2026-03-11 15:49:48,711 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 15:49:48] "POST /api/v1/sessions HTTP/1.1" 200 -
+2026-03-11 15:49:48,726 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 15:49:48] "GET /api/v1/sessions HTTP/1.1" 200 -
+2026-03-11 15:49:49,660 - app.utils.llm_factory - INFO - llm_factory.py:54 - 已经创建DeepSeek LLM:{model_name}
+2026-03-11 15:49:49,661 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 15:49:49] "POST /api/v1/chat HTTP/1.1" 200 -
+2026-03-11 15:49:49,683 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 15:49:49] "GET /api/v1/sessions HTTP/1.1" 200 -
+2026-03-11 15:49:49,907 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 15:49:57,041 - ChatSessionService - INFO - chat_session_service.py:23 - 已经创建聊天会话:9280ba82427b4bd8ab13cf290625e8d9,用户ID:915bc569fdef45a49cde434bb1e4d961
+2026-03-11 15:49:57,052 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 15:49:57] "POST /api/v1/sessions HTTP/1.1" 200 -
+2026-03-11 15:49:57,064 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 15:49:57] "GET /api/v1/sessions HTTP/1.1" 200 -
+2026-03-11 15:49:58,633 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 15:49:58] "GET /api/v1/sessions/58b21ba48c69445293612728ada38444 HTTP/1.1" 200 -
+2026-03-11 15:49:58,646 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 15:49:58] "GET /api/v1/sessions HTTP/1.1" 200 -
+2026-03-11 15:49:59,907 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 15:49:59] "GET /api/v1/sessions/9280ba82427b4bd8ab13cf290625e8d9 HTTP/1.1" 200 -
+2026-03-11 15:49:59,920 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 15:49:59] "GET /api/v1/sessions HTTP/1.1" 200 -
+2026-03-11 15:50:02,971 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 15:50:02] "GET /api/v1/sessions/58b21ba48c69445293612728ada38444 HTTP/1.1" 200 -
+2026-03-11 15:50:02,984 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 15:50:02] "GET /api/v1/sessions HTTP/1.1" 200 -
+2026-03-11 15:50:05,192 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 15:50:05] "GET /api/v1/sessions/9280ba82427b4bd8ab13cf290625e8d9 HTTP/1.1" 200 -
+2026-03-11 15:50:05,209 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 15:50:05] "GET /api/v1/sessions HTTP/1.1" 200 -
+2026-03-11 15:50:07,567 - app.utils.llm_factory - INFO - llm_factory.py:54 - 已经创建DeepSeek LLM:{model_name}
+2026-03-11 15:50:07,567 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 15:50:07] "POST /api/v1/knowledgebases/9974e013d33a4a33bd2a3092740084d4/chat HTTP/1.1" 200 -
+2026-03-11 15:50:07,583 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 15:50:07] "GET /api/v1/sessions HTTP/1.1" 200 -
+2026-03-11 15:50:07,644 - app.services.retrieval_service - INFO - retrieval_service.py:48 - 向量检索 ：检索到5个文档
+2026-03-11 15:50:07,644 - app.services.rag_service - INFO - rag_service.py:42 - 使用vector模型检索到5个文档
+2026-03-11 15:50:07,836 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 15:50:42,001 - app.utils.llm_factory - INFO - llm_factory.py:54 - 已经创建DeepSeek LLM:{model_name}
+2026-03-11 15:50:42,001 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 15:50:42] "POST /api/v1/knowledgebases/9974e013d33a4a33bd2a3092740084d4/chat HTTP/1.1" 200 -
+2026-03-11 15:50:42,017 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 15:50:42] "GET /api/v1/sessions HTTP/1.1" 200 -
+2026-03-11 15:50:42,061 - app.services.retrieval_service - INFO - retrieval_service.py:48 - 向量检索 ：检索到5个文档
+2026-03-11 15:50:42,061 - app.services.rag_service - INFO - rag_service.py:42 - 使用vector模型检索到5个文档
+2026-03-11 15:50:42,255 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-11 15:51:13,486 - app.utils.llm_factory - INFO - llm_factory.py:54 - 已经创建DeepSeek LLM:{model_name}
+2026-03-11 15:51:13,486 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 15:51:13] "POST /api/v1/knowledgebases/9974e013d33a4a33bd2a3092740084d4/chat HTTP/1.1" 200 -
+2026-03-11 15:51:13,500 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [11/Mar/2026 15:51:13] "GET /api/v1/sessions HTTP/1.1" 200 -
+2026-03-11 15:51:13,550 - app.services.retrieval_service - INFO - retrieval_service.py:48 - 向量检索 ：检索到5个文档
+2026-03-11 15:51:13,551 - app.services.rag_service - INFO - rag_service.py:42 - 使用vector模型检索到5个文档
+2026-03-11 15:51:13,757 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-12 02:04:08,994 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 02:04:08] "GET /chat HTTP/1.1" 200 -
+2026-03-12 02:04:09,212 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 02:04:09] "GET /api/v1/sessions HTTP/1.1" 200 -
+2026-03-12 02:04:11,939 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 02:04:11] "GET /api/v1/sessions/58b21ba48c69445293612728ada38444 HTTP/1.1" 200 -
+2026-03-12 02:04:11,969 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 02:04:11] "GET /api/v1/sessions HTTP/1.1" 200 -
+2026-03-12 02:04:15,206 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 02:04:15] "GET / HTTP/1.1" 200 -
+2026-03-12 02:08:14,644 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 02:08:14] "GET / HTTP/1.1" 200 -
+2026-03-12 02:08:43,867 - app - INFO - __init__.py:16 - 初始化数据库...
+2026-03-12 02:08:43,901 - app - INFO - __init__.py:18 - 初始化数据库成功
+2026-03-12 02:08:44,181 - app.services.storage.local_storage - INFO - local_storage.py:20 - 本地存储初始化成功：目录：C:\SoftWare\BYSJ\34火灾知识问答库问答系统\smart_rag\storages
+2026-03-12 02:08:59,338 - sentence_transformers.SentenceTransformer - INFO - SentenceTransformer.py:227 - Load pretrained SentenceTransformer: C:/Users/chris/.cache/modelscope/hub/models/sentence-transformers/all-MiniLM-L6-v2
+2026-03-12 02:08:59,741 - app.utils.embedding_factory - INFO - embedding_factory.py:26 - 创建HuggingFaceEmbeddings:C:/Users/chris/.cache/modelscope/hub/models/sentence-transformers/all-MiniLM-L6-v2
+2026-03-12 02:08:59,742 - app.services.vectordb.chroma - INFO - chroma.py:17 - ChromaDB已经初始化，持久化目录为:./chroma_db
+2026-03-12 02:08:59,912 - app.utils.llm_factory - INFO - llm_factory.py:15 - 已经注册了LLM提供商:deepseek
+2026-03-12 02:08:59,913 - app.utils.llm_factory - INFO - llm_factory.py:15 - 已经注册了LLM提供商:openai
+2026-03-12 02:08:59,913 - app.utils.llm_factory - INFO - llm_factory.py:15 - 已经注册了LLM提供商:ollama
+2026-03-12 02:09:00,045 - py.warnings - WARNING - warnings.py:110 - C:\SoftWare\BYSJ\34火灾知识问答库问答系统\smart_rag\.venv\Lib\site-packages\jieba\_compat.py:18: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+
+2026-03-12 02:09:00,197 - __main__ - INFO - main.py:13 - 正在启动RAGLite服务器在0.0.0.0:5000
+2026-03-12 02:09:00,214 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.88.85:5000
+2026-03-12 02:09:00,215 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-03-12 02:11:39,146 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 02:11:39] "GET / HTTP/1.1" 200 -
+2026-03-12 02:39:48,247 - app - INFO - __init__.py:16 - 初始化数据库...
+2026-03-12 02:39:48,613 - app - INFO - __init__.py:18 - 初始化数据库成功
+2026-03-12 02:39:49,378 - app.services.storage.local_storage - INFO - local_storage.py:20 - 本地存储初始化成功：目录：C:\SoftWare\BYSJ\34火灾知识问答库问答系统\smart_rag\storages
+2026-03-12 02:40:25,434 - sentence_transformers.SentenceTransformer - INFO - SentenceTransformer.py:227 - Load pretrained SentenceTransformer: C:/Users/chris/.cache/modelscope/hub/models/sentence-transformers/all-MiniLM-L6-v2
+2026-03-12 02:40:25,914 - app.utils.embedding_factory - INFO - embedding_factory.py:26 - 创建HuggingFaceEmbeddings:C:/Users/chris/.cache/modelscope/hub/models/sentence-transformers/all-MiniLM-L6-v2
+2026-03-12 02:40:25,914 - app.services.vectordb.chroma - INFO - chroma.py:17 - ChromaDB已经初始化，持久化目录为:./chroma_db
+2026-03-12 02:40:26,119 - app.utils.llm_factory - INFO - llm_factory.py:15 - 已经注册了LLM提供商:deepseek
+2026-03-12 02:40:26,120 - app.utils.llm_factory - INFO - llm_factory.py:15 - 已经注册了LLM提供商:openai
+2026-03-12 02:40:26,120 - app.utils.llm_factory - INFO - llm_factory.py:15 - 已经注册了LLM提供商:ollama
+2026-03-12 02:40:26,327 - py.warnings - WARNING - warnings.py:110 - C:\SoftWare\BYSJ\34火灾知识问答库问答系统\smart_rag\.venv\Lib\site-packages\jieba\_compat.py:18: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+
+2026-03-12 02:40:26,678 - __main__ - INFO - main.py:13 - 正在启动RAGLite服务器在0.0.0.0:5000
+2026-03-12 02:40:26,698 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.88.85:5000
+2026-03-12 02:40:26,698 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-03-12 02:41:20,527 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 02:41:20] "GET / HTTP/1.1" 200 -
+2026-03-12 02:41:26,961 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 02:41:26] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-12 02:46:17,367 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 02:46:17] "GET /chat HTTP/1.1" 200 -
+2026-03-12 02:46:17,490 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 02:46:17] "GET /api/v1/sessions HTTP/1.1" 200 -
+2026-03-12 03:01:51,717 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 03:01:51] "GET / HTTP/1.1" 200 -
+2026-03-12 03:01:55,636 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 03:01:55] "GET / HTTP/1.1" 200 -
+2026-03-12 03:01:56,607 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 03:01:56] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-12 03:01:57,613 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 03:01:57] "GET / HTTP/1.1" 200 -
+2026-03-12 03:01:59,765 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 03:01:59] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-12 03:02:29,088 - app - INFO - __init__.py:16 - 初始化数据库...
+2026-03-12 03:02:29,135 - app - INFO - __init__.py:18 - 初始化数据库成功
+2026-03-12 03:02:29,472 - app.services.storage.local_storage - INFO - local_storage.py:20 - 本地存储初始化成功：目录：C:\SoftWare\BYSJ\34火灾知识问答库问答系统\smart_rag\storages
+2026-03-12 03:02:42,180 - sentence_transformers.SentenceTransformer - INFO - SentenceTransformer.py:227 - Load pretrained SentenceTransformer: C:/Users/chris/.cache/modelscope/hub/models/sentence-transformers/all-MiniLM-L6-v2
+2026-03-12 03:02:42,488 - app.utils.embedding_factory - INFO - embedding_factory.py:26 - 创建HuggingFaceEmbeddings:C:/Users/chris/.cache/modelscope/hub/models/sentence-transformers/all-MiniLM-L6-v2
+2026-03-12 03:02:42,488 - app.services.vectordb.chroma - INFO - chroma.py:17 - ChromaDB已经初始化，持久化目录为:./chroma_db
+2026-03-12 03:02:42,616 - app.utils.llm_factory - INFO - llm_factory.py:15 - 已经注册了LLM提供商:deepseek
+2026-03-12 03:02:42,616 - app.utils.llm_factory - INFO - llm_factory.py:15 - 已经注册了LLM提供商:openai
+2026-03-12 03:02:42,617 - app.utils.llm_factory - INFO - llm_factory.py:15 - 已经注册了LLM提供商:ollama
+2026-03-12 03:02:42,718 - py.warnings - WARNING - warnings.py:110 - C:\SoftWare\BYSJ\34火灾知识问答库问答系统\smart_rag\.venv\Lib\site-packages\jieba\_compat.py:18: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+
+2026-03-12 03:02:42,847 - __main__ - INFO - main.py:13 - 正在启动RAGLite服务器在0.0.0.0:5000
+2026-03-12 03:02:42,859 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.88.85:5000
+2026-03-12 03:02:42,860 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-03-12 03:02:44,266 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 03:02:44] "GET / HTTP/1.1" 200 -
+2026-03-12 03:02:52,383 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 03:02:52] "GET /kb HTTP/1.1" 200 -
+2026-03-12 03:02:55,540 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 03:02:55] "GET /settings HTTP/1.1" 200 -
+2026-03-12 03:02:55,610 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 03:02:55] "GET /api/v1/settings/models HTTP/1.1" 200 -
+2026-03-12 03:02:55,783 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 03:02:55] "GET /api/v1/settings HTTP/1.1" 200 -
+2026-03-12 03:02:59,296 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 03:02:59] "GET /chat HTTP/1.1" 200 -
+2026-03-12 03:02:59,369 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 03:02:59] "GET /api/v1/sessions HTTP/1.1" 200 -
+2026-03-12 03:03:00,895 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 03:03:00] "GET / HTTP/1.1" 200 -
+2026-03-12 03:03:02,657 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 03:03:02] "GET /system-principle HTTP/1.1" 200 -
+2026-03-12 03:03:17,259 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 03:03:17] "GET / HTTP/1.1" 200 -
+2026-03-12 03:03:18,269 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 03:03:18] "GET /accident-cases HTTP/1.1" 200 -
+2026-03-12 03:03:43,384 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 03:03:43] "GET /kb HTTP/1.1" 200 -
+2026-03-12 03:03:44,574 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 03:03:44] "GET / HTTP/1.1" 200 -
+2026-03-12 03:03:46,603 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 03:03:46] "GET /chat HTTP/1.1" 200 -
+2026-03-12 03:03:46,677 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 03:03:46] "GET /api/v1/sessions HTTP/1.1" 200 -
+2026-03-12 03:04:54,275 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 03:04:54] "GET /system-principle HTTP/1.1" 200 -
+2026-03-12 03:05:47,951 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 03:05:47] "GET /accident-cases HTTP/1.1" 200 -
+2026-03-12 03:51:22,227 - app - INFO - __init__.py:16 - 初始化数据库...
+2026-03-12 03:51:22,320 - app - INFO - __init__.py:18 - 初始化数据库成功
+2026-03-12 03:51:22,521 - app.services.storage.local_storage - INFO - local_storage.py:20 - 本地存储初始化成功：目录：C:\SoftWare\BYSJ\34火灾知识问答库问答系统\smart_rag\storages
+2026-03-12 03:51:33,700 - sentence_transformers.SentenceTransformer - INFO - SentenceTransformer.py:227 - Load pretrained SentenceTransformer: C:/Users/chris/.cache/modelscope/hub/models/sentence-transformers/all-MiniLM-L6-v2
+2026-03-12 03:51:33,908 - app.utils.embedding_factory - INFO - embedding_factory.py:26 - 创建HuggingFaceEmbeddings:C:/Users/chris/.cache/modelscope/hub/models/sentence-transformers/all-MiniLM-L6-v2
+2026-03-12 03:51:33,908 - app.services.vectordb.chroma - INFO - chroma.py:17 - ChromaDB已经初始化，持久化目录为:./chroma_db
+2026-03-12 03:51:34,004 - app.utils.llm_factory - INFO - llm_factory.py:15 - 已经注册了LLM提供商:deepseek
+2026-03-12 03:51:34,004 - app.utils.llm_factory - INFO - llm_factory.py:15 - 已经注册了LLM提供商:openai
+2026-03-12 03:51:34,005 - app.utils.llm_factory - INFO - llm_factory.py:15 - 已经注册了LLM提供商:ollama
+2026-03-12 03:51:34,090 - py.warnings - WARNING - warnings.py:110 - C:\SoftWare\BYSJ\34火灾知识问答库问答系统\smart_rag\.venv\Lib\site-packages\jieba\_compat.py:18: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+
+2026-03-12 03:51:34,203 - __main__ - INFO - main.py:13 - 正在启动RAGLite服务器在0.0.0.0:5000
+2026-03-12 03:51:34,213 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.88.85:5000
+2026-03-12 03:51:34,214 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-03-12 03:51:52,657 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 03:51:52] "GET / HTTP/1.1" 200 -
+2026-03-12 03:51:53,568 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 03:51:53] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2026-03-12 12:01:52,485 - app - INFO - __init__.py:16 - 初始化数据库...
+2026-03-12 12:01:52,518 - app - INFO - __init__.py:18 - 初始化数据库成功
+2026-03-12 12:01:52,772 - app.services.storage.local_storage - INFO - local_storage.py:20 - 本地存储初始化成功：目录：C:\SoftWare\BYSJ\34火灾知识问答库问答系统\smart_rag\storages
+2026-03-12 12:02:04,774 - sentence_transformers.SentenceTransformer - INFO - SentenceTransformer.py:227 - Load pretrained SentenceTransformer: C:/Users/chris/.cache/modelscope/hub/models/sentence-transformers/all-MiniLM-L6-v2
+2026-03-12 12:02:05,004 - app.utils.embedding_factory - INFO - embedding_factory.py:26 - 创建HuggingFaceEmbeddings:C:/Users/chris/.cache/modelscope/hub/models/sentence-transformers/all-MiniLM-L6-v2
+2026-03-12 12:02:05,004 - app.services.vectordb.chroma - INFO - chroma.py:17 - ChromaDB已经初始化，持久化目录为:./chroma_db
+2026-03-12 12:02:05,119 - app.utils.llm_factory - INFO - llm_factory.py:15 - 已经注册了LLM提供商:deepseek
+2026-03-12 12:02:05,119 - app.utils.llm_factory - INFO - llm_factory.py:15 - 已经注册了LLM提供商:openai
+2026-03-12 12:02:05,119 - app.utils.llm_factory - INFO - llm_factory.py:15 - 已经注册了LLM提供商:ollama
+2026-03-12 12:02:05,212 - py.warnings - WARNING - warnings.py:110 - C:\SoftWare\BYSJ\34火灾知识问答库问答系统\smart_rag\.venv\Lib\site-packages\jieba\_compat.py:18: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+
+2026-03-12 12:02:05,338 - __main__ - INFO - main.py:13 - 正在启动RAGLite服务器在0.0.0.0:5000
+2026-03-12 12:02:05,355 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://127.0.0.1:5000
+2026-03-12 12:02:05,355 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-03-12 12:03:19,908 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:03:19] "GET / HTTP/1.1" 200 -
+2026-03-12 12:03:24,517 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:03:24] "GET /accident-cases HTTP/1.1" 200 -
+2026-03-12 12:03:25,997 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:03:25] "GET / HTTP/1.1" 200 -
+2026-03-12 12:03:26,825 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:03:26] "GET /system-principle HTTP/1.1" 200 -
+2026-03-12 12:03:35,078 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:03:35] "GET /fire-analytics HTTP/1.1" 200 -
+2026-03-12 12:03:38,663 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:03:38] "GET /chat HTTP/1.1" 200 -
+2026-03-12 12:03:38,757 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:03:38] "GET /api/v1/sessions HTTP/1.1" 200 -
+2026-03-12 12:03:39,209 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:03:39] "GET /fire-analytics HTTP/1.1" 200 -
+2026-03-12 12:04:08,399 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:04:08] "GET /chat HTTP/1.1" 200 -
+2026-03-12 12:04:08,529 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:04:08] "GET /api/v1/sessions HTTP/1.1" 200 -
+2026-03-12 12:04:09,186 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:04:09] "GET /fire-analytics HTTP/1.1" 200 -
+2026-03-12 12:04:11,021 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:04:11] "GET / HTTP/1.1" 200 -
+2026-03-12 12:04:12,591 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:04:12] "GET /fire-analytics HTTP/1.1" 200 -
+2026-03-12 12:05:52,512 - app - INFO - __init__.py:16 - 初始化数据库...
+2026-03-12 12:05:52,535 - app - INFO - __init__.py:18 - 初始化数据库成功
+2026-03-12 12:05:52,694 - app.services.storage.local_storage - INFO - local_storage.py:20 - 本地存储初始化成功：目录：C:\SoftWare\BYSJ\34火灾知识问答库问答系统\smart_rag\storages
+2026-03-12 12:06:02,231 - sentence_transformers.SentenceTransformer - INFO - SentenceTransformer.py:227 - Load pretrained SentenceTransformer: C:/Users/chris/.cache/modelscope/hub/models/sentence-transformers/all-MiniLM-L6-v2
+2026-03-12 12:06:02,431 - app.utils.embedding_factory - INFO - embedding_factory.py:26 - 创建HuggingFaceEmbeddings:C:/Users/chris/.cache/modelscope/hub/models/sentence-transformers/all-MiniLM-L6-v2
+2026-03-12 12:06:02,432 - app.services.vectordb.chroma - INFO - chroma.py:17 - ChromaDB已经初始化，持久化目录为:./chroma_db
+2026-03-12 12:06:02,527 - app.utils.llm_factory - INFO - llm_factory.py:15 - 已经注册了LLM提供商:deepseek
+2026-03-12 12:06:02,527 - app.utils.llm_factory - INFO - llm_factory.py:15 - 已经注册了LLM提供商:openai
+2026-03-12 12:06:02,527 - app.utils.llm_factory - INFO - llm_factory.py:15 - 已经注册了LLM提供商:ollama
+2026-03-12 12:06:02,602 - py.warnings - WARNING - warnings.py:110 - C:\SoftWare\BYSJ\34火灾知识问答库问答系统\smart_rag\.venv\Lib\site-packages\jieba\_compat.py:18: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+
+2026-03-12 12:06:02,719 - __main__ - INFO - main.py:13 - 正在启动RAGLite服务器在0.0.0.0:5000
+2026-03-12 12:06:02,727 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.88.85:5000
+2026-03-12 12:06:02,728 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-03-12 12:06:14,135 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:06:14] "GET /fire-analytics HTTP/1.1" 200 -
+2026-03-12 12:06:16,800 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:06:16] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2026-03-12 12:06:27,443 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:06:27] "GET /fire-analytics HTTP/1.1" 200 -
+2026-03-12 12:06:33,735 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:06:33] "GET /fire-analytics HTTP/1.1" 200 -
+2026-03-12 12:09:28,688 - app - INFO - __init__.py:16 - 初始化数据库...
+2026-03-12 12:09:28,708 - app - INFO - __init__.py:18 - 初始化数据库成功
+2026-03-12 12:09:28,850 - app.services.storage.local_storage - INFO - local_storage.py:20 - 本地存储初始化成功：目录：C:\SoftWare\BYSJ\34火灾知识问答库问答系统\smart_rag\storages
+2026-03-12 12:09:38,597 - sentence_transformers.SentenceTransformer - INFO - SentenceTransformer.py:227 - Load pretrained SentenceTransformer: C:/Users/chris/.cache/modelscope/hub/models/sentence-transformers/all-MiniLM-L6-v2
+2026-03-12 12:09:38,800 - app.utils.embedding_factory - INFO - embedding_factory.py:26 - 创建HuggingFaceEmbeddings:C:/Users/chris/.cache/modelscope/hub/models/sentence-transformers/all-MiniLM-L6-v2
+2026-03-12 12:09:38,800 - app.services.vectordb.chroma - INFO - chroma.py:17 - ChromaDB已经初始化，持久化目录为:./chroma_db
+2026-03-12 12:09:38,885 - app.utils.llm_factory - INFO - llm_factory.py:15 - 已经注册了LLM提供商:deepseek
+2026-03-12 12:09:38,885 - app.utils.llm_factory - INFO - llm_factory.py:15 - 已经注册了LLM提供商:openai
+2026-03-12 12:09:38,885 - app.utils.llm_factory - INFO - llm_factory.py:15 - 已经注册了LLM提供商:ollama
+2026-03-12 12:09:38,969 - py.warnings - WARNING - warnings.py:110 - C:\SoftWare\BYSJ\34火灾知识问答库问答系统\smart_rag\.venv\Lib\site-packages\jieba\_compat.py:18: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+
+2026-03-12 12:09:39,152 - __main__ - INFO - main.py:13 - 正在启动RAGLite服务器在0.0.0.0:5000
+2026-03-12 12:09:39,166 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.88.85:5000
+2026-03-12 12:09:39,166 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-03-12 12:10:01,081 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:10:01] "GET /fire-analytics HTTP/1.1" 200 -
+2026-03-12 12:10:01,240 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:10:01] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2026-03-12 12:11:56,572 - app - INFO - __init__.py:16 - 初始化数据库...
+2026-03-12 12:11:56,597 - app - INFO - __init__.py:18 - 初始化数据库成功
+2026-03-12 12:11:56,762 - app.services.storage.local_storage - INFO - local_storage.py:20 - 本地存储初始化成功：目录：C:\SoftWare\BYSJ\34火灾知识问答库问答系统\smart_rag\storages
+2026-03-12 12:12:06,727 - sentence_transformers.SentenceTransformer - INFO - SentenceTransformer.py:227 - Load pretrained SentenceTransformer: C:/Users/chris/.cache/modelscope/hub/models/sentence-transformers/all-MiniLM-L6-v2
+2026-03-12 12:12:06,927 - app.utils.embedding_factory - INFO - embedding_factory.py:26 - 创建HuggingFaceEmbeddings:C:/Users/chris/.cache/modelscope/hub/models/sentence-transformers/all-MiniLM-L6-v2
+2026-03-12 12:12:06,928 - app.services.vectordb.chroma - INFO - chroma.py:17 - ChromaDB已经初始化，持久化目录为:./chroma_db
+2026-03-12 12:12:07,017 - app.utils.llm_factory - INFO - llm_factory.py:15 - 已经注册了LLM提供商:deepseek
+2026-03-12 12:12:07,017 - app.utils.llm_factory - INFO - llm_factory.py:15 - 已经注册了LLM提供商:openai
+2026-03-12 12:12:07,017 - app.utils.llm_factory - INFO - llm_factory.py:15 - 已经注册了LLM提供商:ollama
+2026-03-12 12:12:07,100 - py.warnings - WARNING - warnings.py:110 - C:\SoftWare\BYSJ\34火灾知识问答库问答系统\smart_rag\.venv\Lib\site-packages\jieba\_compat.py:18: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+
+2026-03-12 12:12:07,210 - __main__ - INFO - main.py:13 - 正在启动RAGLite服务器在0.0.0.0:5000
+2026-03-12 12:12:07,224 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.88.85:5000
+2026-03-12 12:12:07,224 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-03-12 12:12:08,763 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:12:08] "GET / HTTP/1.1" 200 -
+2026-03-12 12:12:12,751 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:12:12] "GET /kb HTTP/1.1" 200 -
+2026-03-12 12:12:14,386 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:12:14] "GET /accident-cases HTTP/1.1" 200 -
+2026-03-12 12:12:15,653 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:12:15] "GET /system-principle HTTP/1.1" 200 -
+2026-03-12 12:12:17,013 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:12:17] "GET /fire-analytics HTTP/1.1" 200 -
+2026-03-12 12:12:30,046 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:12:30] "GET / HTTP/1.1" 200 -
+2026-03-12 12:12:36,926 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:12:36] "GET /kb HTTP/1.1" 200 -
+2026-03-12 12:12:43,052 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:12:43] "GET /kb HTTP/1.1" 200 -
+2026-03-12 12:12:44,121 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:12:44] "GET /settings HTTP/1.1" 200 -
+2026-03-12 12:12:44,184 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:12:44] "GET /api/v1/settings/models HTTP/1.1" 200 -
+2026-03-12 12:12:44,329 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:12:44] "GET /api/v1/settings HTTP/1.1" 200 -
+2026-03-12 12:12:53,488 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:12:53] "GET /fire-analytics HTTP/1.1" 200 -
+2026-03-12 12:12:54,655 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:12:54] "GET /chat HTTP/1.1" 200 -
+2026-03-12 12:12:54,729 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:12:54] "GET /api/v1/sessions HTTP/1.1" 200 -
+2026-03-12 12:12:55,438 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:12:55] "GET /kb HTTP/1.1" 200 -
+2026-03-12 12:12:55,984 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:12:55] "GET / HTTP/1.1" 200 -
+2026-03-12 12:12:57,115 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:12:57] "GET / HTTP/1.1" 200 -
+2026-03-12 12:13:02,246 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:13:02] "GET /system-principle HTTP/1.1" 200 -
+2026-03-12 12:13:09,083 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:13:09] "GET / HTTP/1.1" 200 -
+2026-03-12 12:13:14,013 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:13:14] "GET /kb HTTP/1.1" 200 -
+2026-03-12 12:16:17,910 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:16:17] "GET / HTTP/1.1" 200 -
+2026-03-12 12:16:21,334 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:16:21] "GET /kb HTTP/1.1" 200 -
+2026-03-12 12:16:23,001 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:16:23] "GET /settings HTTP/1.1" 200 -
+2026-03-12 12:16:23,111 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:16:23] "GET /api/v1/settings/models HTTP/1.1" 200 -
+2026-03-12 12:16:23,302 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:16:23] "GET /api/v1/settings HTTP/1.1" 200 -
+2026-03-12 12:16:24,794 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:16:24] "GET /chat HTTP/1.1" 200 -
+2026-03-12 12:16:24,893 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:16:24] "GET /api/v1/sessions HTTP/1.1" 200 -
+2026-03-12 12:16:26,897 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:16:26] "GET /fire-analytics HTTP/1.1" 200 -
+2026-03-12 12:16:29,519 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:16:29] "GET /system-principle HTTP/1.1" 200 -
+2026-03-12 12:16:32,898 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:16:32] "GET / HTTP/1.1" 200 -
+2026-03-12 12:16:33,578 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:16:33] "GET /accident-cases HTTP/1.1" 200 -
+2026-03-12 12:16:47,649 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:16:47] "GET / HTTP/1.1" 200 -
+2026-03-12 12:16:50,827 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:16:50] "GET /kb HTTP/1.1" 200 -
+2026-03-12 12:16:52,803 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:16:52] "GET /kb/9974e013d33a4a33bd2a3092740084d4 HTTP/1.1" 200 -
+2026-03-12 12:16:55,636 - chromadb.telemetry.product.posthog - INFO - posthog.py:22 - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-03-12 12:16:56,751 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:16:56] "GET /documents/0b553643727d4f5aac4e278c7e609d8e/chunks HTTP/1.1" 200 -
+2026-03-12 12:17:02,227 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:17:02] "GET / HTTP/1.1" 200 -
+2026-03-12 12:17:03,220 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:17:03] "GET /chat HTTP/1.1" 200 -
+2026-03-12 12:17:03,356 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:17:03] "GET /api/v1/sessions HTTP/1.1" 200 -
+2026-03-12 12:17:05,212 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:17:05] "GET /api/v1/sessions/58b21ba48c69445293612728ada38444 HTTP/1.1" 200 -
+2026-03-12 12:17:05,254 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:17:05] "GET /api/v1/sessions HTTP/1.1" 200 -
+2026-03-12 12:17:06,931 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:17:06] "GET /api/v1/sessions/9280ba82427b4bd8ab13cf290625e8d9 HTTP/1.1" 200 -
+2026-03-12 12:17:06,970 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:17:06] "GET /api/v1/sessions HTTP/1.1" 200 -
+2026-03-12 12:17:24,184 - app.utils.llm_factory - INFO - llm_factory.py:54 - 已经创建DeepSeek LLM:{model_name}
+2026-03-12 12:17:24,187 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:17:24] "POST /api/v1/chat HTTP/1.1" 200 -
+2026-03-12 12:17:24,216 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:17:24] "GET /api/v1/sessions HTTP/1.1" 200 -
+2026-03-12 12:17:24,722 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-12 12:17:34,068 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:17:34] "GET /chat HTTP/1.1" 200 -
+2026-03-12 12:17:34,178 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:17:34] "GET /api/v1/sessions HTTP/1.1" 200 -
+2026-03-12 12:17:35,555 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:17:35] "GET /api/v1/sessions/9280ba82427b4bd8ab13cf290625e8d9 HTTP/1.1" 200 -
+2026-03-12 12:17:35,602 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:17:35] "GET /api/v1/sessions HTTP/1.1" 200 -
+2026-03-12 12:17:40,397 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:17:40] "GET / HTTP/1.1" 200 -
+2026-03-12 12:17:42,373 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:17:42] "GET /kb HTTP/1.1" 200 -
+2026-03-12 12:17:56,086 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:17:56] "GET / HTTP/1.1" 200 -
+2026-03-12 12:17:58,333 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:17:58] "GET /kb HTTP/1.1" 200 -
+2026-03-12 12:18:06,217 - KnowledgebaseService - INFO - knowledgebase_service.py:221 - 更新知识库:9974e013d33a4a33bd2a3092740084d4 火灾知识库
+2026-03-12 12:18:06,223 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:18:06] "PUT /api/v1/kb/9974e013d33a4a33bd2a3092740084d4 HTTP/1.1" 200 -
+2026-03-12 12:18:06,259 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:18:06] "GET /kb HTTP/1.1" 200 -
+2026-03-12 12:18:30,643 - KnowledgebaseService - INFO - knowledgebase_service.py:68 - 创建知识库成功:ID:{kb.id}
+2026-03-12 12:18:30,649 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:18:30] "POST /api/v1/kb HTTP/1.1" 200 -
+2026-03-12 12:18:30,680 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:18:30] "GET /kb HTTP/1.1" 200 -
+2026-03-12 12:18:35,445 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:18:35] "GET /kb/a23d0f05973e4423992df7d6a5cef790 HTTP/1.1" 200 -
+2026-03-12 12:18:45,873 - app.services.storage.local_storage - INFO - local_storage.py:32 - 文件已经上传:documents/a23d0f05973e4423992df7d6a5cef790/04c8e52fbf554e969decb0c8e86bad48/郑州暴雨.pdf
+2026-03-12 12:18:45,881 - DocumentService - INFO - document_service.py:62 - 文档上传成功:04c8e52fbf554e969decb0c8e86bad48
+2026-03-12 12:18:45,887 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:18:45] "POST /api/v1/knowledgebases/a23d0f05973e4423992df7d6a5cef790/documents HTTP/1.1" 200 -
+2026-03-12 12:18:45,931 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:18:45] "GET /kb/a23d0f05973e4423992df7d6a5cef790 HTTP/1.1" 200 -
+2026-03-12 12:18:48,708 - DocumentService - INFO - document_service.py:91 - 提交文档处理任务:04c8e52fbf554e969decb0c8e86bad48
+2026-03-12 12:18:48,711 - DocumentService - INFO - document_service.py:106 - 开始处理文档:04c8e52fbf554e969decb0c8e86bad48
+2026-03-12 12:18:48,712 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:18:48] "POST /api/v1/documents/04c8e52fbf554e969decb0c8e86bad48/process HTTP/1.1" 200 -
+2026-03-12 12:18:48,730 - DocumentService - INFO - document_service.py:152 - 文档04c8e52fbf554e969decb0c8e86bad48状态已经更新为processing状态了
+2026-03-12 12:18:48,732 - app.services.storage.local_storage - INFO - local_storage.py:47 - 文件已经下载成功:C:\SoftWare\BYSJ\34火灾知识问答库问答系统\smart_rag\storages\documents\a23d0f05973e4423992df7d6a5cef790\04c8e52fbf554e969decb0c8e86bad48\郑州暴雨.pdf
+2026-03-12 12:18:52,155 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:18:52] "GET /kb/a23d0f05973e4423992df7d6a5cef790 HTTP/1.1" 200 -
+2026-03-12 12:18:58,155 - DocumentService - INFO - document_service.py:157 - 加载到46个文档
+2026-03-12 12:18:58,162 - DocumentService - INFO - document_service.py:168 - 加载到95个分块
+2026-03-12 12:19:06,865 - app.services.vectordb.chroma - INFO - chroma.py:35 - 已经向ChromDB集合kb_a23d0f05973e4423992df7d6a5cef790添加了95个文档
+2026-03-12 12:19:06,943 - DocumentService - INFO - document_service.py:199 - 文档04c8e52fbf554e969decb0c8e86bad48处理完成,分块数量为95
+2026-03-12 12:19:11,264 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:19:11] "GET /kb/a23d0f05973e4423992df7d6a5cef790 HTTP/1.1" 200 -
+2026-03-12 12:19:15,068 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:19:15] "GET /documents/04c8e52fbf554e969decb0c8e86bad48/chunks HTTP/1.1" 200 -
+2026-03-12 12:19:23,514 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:19:23] "GET /kb HTTP/1.1" 200 -
+2026-03-12 12:19:36,261 - KnowledgebaseService - INFO - knowledgebase_service.py:221 - 更新知识库:a23d0f05973e4423992df7d6a5cef790 河南郑州“7·20”特大暴雨灾害 调查报告
+2026-03-12 12:19:36,282 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:19:36] "PUT /api/v1/kb/a23d0f05973e4423992df7d6a5cef790 HTTP/1.1" 200 -
+2026-03-12 12:19:36,317 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:19:36] "GET /kb HTTP/1.1" 200 -
+2026-03-12 12:19:38,133 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:19:38] "GET /kb/a23d0f05973e4423992df7d6a5cef790 HTTP/1.1" 200 -
+2026-03-12 12:19:40,173 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:19:40] "GET /chat HTTP/1.1" 200 -
+2026-03-12 12:19:40,279 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:19:40] "GET /api/v1/sessions HTTP/1.1" 200 -
+2026-03-12 12:19:41,701 - ChatSessionService - INFO - chat_session_service.py:23 - 已经创建聊天会话:c7ec2a6008bd4c97bda6d334adadbf03,用户ID:915bc569fdef45a49cde434bb1e4d961
+2026-03-12 12:19:41,716 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:19:41] "POST /api/v1/sessions HTTP/1.1" 200 -
+2026-03-12 12:19:41,735 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:19:41] "GET /api/v1/sessions HTTP/1.1" 200 -
+2026-03-12 12:19:47,772 - ChatSessionService - INFO - chat_session_service.py:23 - 已经创建聊天会话:1cb9c4b824974ee49a0d664a7d522f1c,用户ID:915bc569fdef45a49cde434bb1e4d961
+2026-03-12 12:19:47,777 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:19:47] "POST /api/v1/sessions HTTP/1.1" 200 -
+2026-03-12 12:19:47,794 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:19:47] "GET /api/v1/sessions HTTP/1.1" 200 -
+2026-03-12 12:20:20,423 - app.utils.llm_factory - INFO - llm_factory.py:54 - 已经创建DeepSeek LLM:{model_name}
+2026-03-12 12:20:20,423 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:20:20] "POST /api/v1/knowledgebases/a23d0f05973e4423992df7d6a5cef790/chat HTTP/1.1" 200 -
+2026-03-12 12:20:20,441 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:20:20] "GET /api/v1/sessions HTTP/1.1" 200 -
+2026-03-12 12:20:20,565 - app.services.retrieval_service - INFO - retrieval_service.py:48 - 向量检索 ：检索到5个文档
+2026-03-12 12:20:20,565 - app.services.rag_service - INFO - rag_service.py:42 - 使用vector模型检索到5个文档
+2026-03-12 12:20:20,833 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-12 12:21:05,608 - app.utils.llm_factory - INFO - llm_factory.py:54 - 已经创建DeepSeek LLM:{model_name}
+2026-03-12 12:21:05,609 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:21:05] "POST /api/v1/knowledgebases/a23d0f05973e4423992df7d6a5cef790/chat HTTP/1.1" 200 -
+2026-03-12 12:21:05,646 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:21:05] "GET /api/v1/sessions HTTP/1.1" 200 -
+2026-03-12 12:21:05,762 - app.services.retrieval_service - INFO - retrieval_service.py:48 - 向量检索 ：检索到5个文档
+2026-03-12 12:21:05,763 - app.services.rag_service - INFO - rag_service.py:42 - 使用vector模型检索到5个文档
+2026-03-12 12:21:05,969 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-12 12:21:35,512 - app.utils.llm_factory - INFO - llm_factory.py:54 - 已经创建DeepSeek LLM:{model_name}
+2026-03-12 12:21:35,513 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:21:35] "POST /api/v1/knowledgebases/a23d0f05973e4423992df7d6a5cef790/chat HTTP/1.1" 200 -
+2026-03-12 12:21:35,558 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:21:35] "GET /api/v1/sessions HTTP/1.1" 200 -
+2026-03-12 12:21:35,661 - app.services.retrieval_service - INFO - retrieval_service.py:48 - 向量检索 ：检索到5个文档
+2026-03-12 12:21:35,662 - app.services.rag_service - INFO - rag_service.py:42 - 使用vector模型检索到5个文档
+2026-03-12 12:21:35,849 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-12 12:21:48,019 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:21:48] "GET / HTTP/1.1" 200 -
+2026-03-12 12:21:48,986 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:21:48] "GET /settings HTTP/1.1" 200 -
+2026-03-12 12:21:49,094 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:21:49] "GET /api/v1/settings/models HTTP/1.1" 200 -
+2026-03-12 12:21:49,302 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:21:49] "GET /api/v1/settings HTTP/1.1" 200 -
+2026-03-12 12:21:51,850 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:21:51] "GET / HTTP/1.1" 200 -
+2026-03-12 12:21:55,828 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:21:55] "GET /settings HTTP/1.1" 200 -
+2026-03-12 12:21:55,904 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:21:55] "GET /api/v1/settings/models HTTP/1.1" 200 -
+2026-03-12 12:21:56,139 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:21:56] "GET /api/v1/settings HTTP/1.1" 200 -
+2026-03-12 12:22:02,962 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:22:02] "PUT /api/v1/settings HTTP/1.1" 200 -
+2026-03-12 12:22:04,541 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:22:04] "GET /settings HTTP/1.1" 200 -
+2026-03-12 12:22:04,654 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:22:04] "GET /api/v1/settings/models HTTP/1.1" 200 -
+2026-03-12 12:22:04,906 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:22:04] "GET /api/v1/settings HTTP/1.1" 200 -
+2026-03-12 12:22:05,237 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [12/Mar/2026 12:22:05] "GET / HTTP/1.1" 200 -
