@@ -1,0 +1,363 @@
+{% extends "base.html" %}
+
+{% block title %}系统工作原理 - 知识问答库（火灾）问答系统{% endblock %}
+
+{% block header_title %}系统工作原理{% endblock %}
+
+{% block extra_css %}
+<style>
+    .principle-page {
+        background: linear-gradient(165deg, #fff8ef 0%, #ffe8cf 52%, #ffd9b3 100%);
+        border-radius: 24px;
+        border: 1px solid rgba(210, 113, 38, 0.24);
+        padding: 2rem;
+        box-shadow: 0 16px 36px rgba(176, 96, 36, 0.14);
+    }
+
+    .principle-hero {
+        border-radius: 20px;
+        background: linear-gradient(132deg, #ffcc95 0%, #ffb477 48%, #f78f49 100%);
+        padding: 1.7rem;
+        color: #4d250d;
+        border: 1px solid rgba(148, 72, 23, 0.26);
+        margin-bottom: 1.5rem;
+    }
+
+    .principle-hero h2 {
+        font-weight: 700;
+    }
+
+    .principle-hero p {
+        color: rgba(74, 32, 8, 0.9);
+    }
+
+    .principle-grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 1rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .principle-kpi {
+        grid-column: span 3;
+        border-radius: 16px;
+        border: 1px solid rgba(176, 84, 20, 0.22);
+        background: rgba(255, 248, 240, 0.9);
+        padding: 1rem 1rem 0.9rem;
+    }
+
+    .principle-kpi .kpi-label {
+        color: #845537;
+        font-size: 0.82rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .principle-kpi .kpi-value {
+        font-size: 1.45rem;
+        color: #602d0d;
+        font-weight: 700;
+    }
+
+    .timeline-card {
+        border-radius: 18px;
+        border: 1px solid rgba(189, 100, 36, 0.25);
+        background: rgba(255, 249, 242, 0.92);
+        box-shadow: 0 8px 20px rgba(153, 81, 29, 0.1);
+        height: 100%;
+    }
+
+    .timeline-card .card-body {
+        padding: 1.4rem;
+    }
+
+    .step-badge {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        font-weight: 700;
+        color: #fff8f0;
+        background: #8f3a00;
+        margin-bottom: 0.9rem;
+    }
+
+    .timeline-card h5 {
+        color: #5c2f12;
+        font-weight: 600;
+    }
+
+    .timeline-card p {
+        color: #795640;
+        margin-bottom: 0.55rem;
+        line-height: 1.6;
+    }
+
+    .timeline-list {
+        margin: 0;
+        padding-left: 1rem;
+    }
+
+    .timeline-list li {
+        color: #6d4a36;
+        margin-bottom: 0.3rem;
+        font-size: 0.9rem;
+    }
+
+    .tech-panel {
+        border-radius: 18px;
+        border: 1px solid rgba(191, 94, 29, 0.25);
+        background: rgba(255, 249, 241, 0.9);
+        padding: 1.1rem 1.2rem;
+        margin-top: 1rem;
+    }
+
+    .tech-panel h4 {
+        color: #5d2d10;
+        font-weight: 700;
+        margin-bottom: 0.8rem;
+    }
+
+    .tech-panel .row > div {
+        margin-bottom: 0.8rem;
+    }
+
+    .tech-point {
+        border-radius: 14px;
+        background: rgba(255, 242, 228, 0.8);
+        border: 1px solid rgba(176, 90, 30, 0.18);
+        padding: 0.8rem;
+        height: 100%;
+    }
+
+    .tech-point h6 {
+        margin-bottom: 0.4rem;
+        color: #6a3210;
+        font-weight: 600;
+    }
+
+    .tech-point p {
+        margin-bottom: 0;
+        color: #755340;
+        font-size: 0.9rem;
+    }
+
+    .principle-arch {
+        margin-top: 1rem;
+        border-radius: 18px;
+        border: 1px dashed rgba(149, 65, 9, 0.35);
+        background: rgba(255, 238, 217, 0.72);
+        padding: 1rem 1.1rem;
+    }
+
+    .principle-arch h5 {
+        color: #6a300f;
+        margin-bottom: 0.6rem;
+        font-weight: 700;
+    }
+
+    .principle-arch p {
+        margin-bottom: 0.45rem;
+        color: #6f4830;
+    }
+
+    .principle-arch p:last-child {
+        margin-bottom: 0;
+    }
+
+    .principle-note {
+        margin-top: 1.4rem;
+        border-radius: 16px;
+        border: 1px dashed rgba(143, 58, 0, 0.3);
+        background: rgba(255, 241, 226, 0.75);
+        padding: 1rem 1.2rem;
+        color: #6c4329;
+    }
+
+    @media (max-width: 992px) {
+        .principle-kpi {
+            grid-column: span 6;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .principle-page {
+            padding: 1.2rem;
+        }
+
+        .principle-kpi {
+            grid-column: span 12;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="principle-page">
+    <div class="principle-hero">
+        <h2><i class="bi bi-diagram-3"></i> 火灾知识问答系统如何工作</h2>
+        <p class="mb-0">系统采用 RAG（Retrieval-Augmented Generation）技术栈，将“结构化检索”与“语言模型推理”组合，形成证据驱动的火灾事故问答闭环。每个回答都经历数据治理、向量召回、重排过滤、提示词约束和输出校验五个关键环节，核心目标是降低幻觉并提升专业可解释性。</p>
+    </div>
+
+    <div class="principle-grid">
+        <div class="principle-kpi">
+            <div class="kpi-label">处理对象</div>
+            <div class="kpi-value">事故文档多格式</div>
+        </div>
+        <div class="principle-kpi">
+            <div class="kpi-label">核心检索</div>
+            <div class="kpi-value">语义向量 + 关键词</div>
+        </div>
+        <div class="principle-kpi">
+            <div class="kpi-label">生成模式</div>
+            <div class="kpi-value">证据约束式回答</div>
+        </div>
+        <div class="principle-kpi">
+            <div class="kpi-label">质量控制</div>
+            <div class="kpi-value">召回率 / 准确率联调</div>
+        </div>
+    </div>
+
+    <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+            <div class="card timeline-card">
+                <div class="card-body">
+                    <span class="step-badge">1</span>
+                    <h5>文档接入</h5>
+                    <p>上传事故调查报告、标准规范、演练预案和现场处置记录。系统先进行类型识别、字符编码统一和基础元数据落盘。</p>
+                    <ul class="timeline-list">
+                        <li>支持 PDF、DOCX、TXT、MD 等异构格式</li>
+                        <li>抽取标题、来源、时间、事故类型等字段</li>
+                        <li>构建“文档ID-知识库ID-用户ID”权限关系</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="card timeline-card">
+                <div class="card-body">
+                    <span class="step-badge">2</span>
+                    <h5>解析与分块</h5>
+                    <p>采用“结构优先 + 语义补偿”分块策略。优先按章节标题和段落边界切分，再通过滑动窗口保留跨段上下文。</p>
+                    <ul class="timeline-list">
+                        <li>分块长度与重叠窗口可调，平衡召回与噪声</li>
+                        <li>清理页眉页脚、目录噪音和重复文本</li>
+                        <li>保留章节编号，便于生成时做出处定位</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="card timeline-card">
+                <div class="card-body">
+                    <span class="step-badge">3</span>
+                    <h5>向量化建库</h5>
+                    <p>分块文本经 Embedding 模型转换为高维向量，并写入向量数据库。检索时通过余弦相似度完成近邻查找。</p>
+                    <ul class="timeline-list">
+                        <li>向量索引与原文片段双向映射，支持反查</li>
+                        <li>可按知识库隔离索引，避免跨库污染</li>
+                        <li>支持增量更新，文档变更后局部重建</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="card timeline-card">
+                <div class="card-body">
+                    <span class="step-badge">4</span>
+                    <h5>智能检索</h5>
+                    <p>问题进入检索层后先进行意图解析，再执行语义召回，必要时结合关键词过滤进行二次重排。</p>
+                    <ul class="timeline-list">
+                        <li>TopK 控制候选规模，避免上下文过长</li>
+                        <li>重排模型提升证据相关性排序稳定度</li>
+                        <li>可按事故类型、时间段做元数据过滤</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="card timeline-card">
+                <div class="card-body">
+                    <span class="step-badge">5</span>
+                    <h5>模型生成</h5>
+                    <p>生成层将问题、会话历史和检索证据拼装为结构化 Prompt。模型输出时遵循“结论-依据-建议”模板。</p>
+                    <ul class="timeline-list">
+                        <li>限制回答必须依据检索片段，不得臆测</li>
+                        <li>支持流式输出，提升交互反馈速度</li>
+                        <li>支持 Markdown 渲染，便于形成复盘报告</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="card timeline-card">
+                <div class="card-body">
+                    <span class="step-badge">6</span>
+                    <h5>持续优化</h5>
+                    <p>通过离线评估与在线反馈联合调优，持续修正检索参数、Prompt 模板和知识库覆盖质量。</p>
+                    <ul class="timeline-list">
+                        <li>跟踪命中率、答案一致性、引用完整度</li>
+                        <li>对低质量回答回溯问题来源与召回链路</li>
+                        <li>沉淀高频问题模板，构建行业问答资产</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tech-panel">
+        <h4><i class="bi bi-cpu"></i> 关键技术细节</h4>
+        <div class="row g-3">
+            <div class="col-lg-4 col-md-6">
+                <div class="tech-point">
+                    <h6>文档解析引擎</h6>
+                    <p>解析层会针对 PDF 版式错行、表格断裂、页码干扰做清洗，先修复文本结构再进入分块，减少“召回命中但语义残缺”的问题。</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="tech-point">
+                    <h6>检索双通道</h6>
+                    <p>语义召回负责发现“同义表达”，关键词过滤负责保证“专业术语命中”，双通道融合后可显著提升火灾专业问答的稳定性。</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="tech-point">
+                    <h6>上下文压缩</h6>
+                    <p>当召回片段过多时，系统会按相关度与多样性裁剪上下文，保留关键证据链，降低模型上下文窗口浪费。</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="tech-point">
+                    <h6>提示词约束</h6>
+                    <p>Prompt 明确要求给出依据出处、避免扩写无来源结论，并在证据不足时返回“无法确认”，用于抑制生成幻觉。</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="tech-point">
+                    <h6>会话记忆机制</h6>
+                    <p>系统保留最近多轮问答上下文，并与当前检索结果合并，保证“追问场景”下回答连贯且不丢失事故背景。</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="tech-point">
+                    <h6>可观测与回溯</h6>
+                    <p>记录问题、召回片段、生成结果和响应耗时，便于定位是“检索失准”还是“生成偏移”，支持持续优化闭环。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="principle-arch">
+        <h5><i class="bi bi-bezier2"></i> 架构视角下的数据流</h5>
+        <p><strong>离线链路：</strong>文档上传 → 清洗解析 → 分块 → 向量化 → 索引入库。</p>
+        <p><strong>在线链路：</strong>用户提问 → 检索召回/重排 → Prompt 拼装 → 模型生成 → 前端流式展示。</p>
+        <p><strong>治理链路：</strong>日志采样 → 质量评估 → 参数迭代 → 知识库更新，形成闭环提升。</p>
+    </div>
+
+    <div class="principle-note">
+        <strong><i class="bi bi-shield-check"></i> 应用价值：</strong>
+        支持事故复盘培训、隐患研判、应急演练准备和制度改进建议生成，让火灾知识真正可检索、可解释、可复用；同时可作为企事业单位安全内训与制度评审的技术底座。
+    </div>
+</div>
+{% endblock %}

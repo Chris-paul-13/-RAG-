@@ -1,0 +1,221 @@
+{% extends "base.html" %}
+
+{% block title %}事故案例素材 - 知识问答库（火灾）问答系统{% endblock %}
+
+{% block header_title %}事故案例素材{% endblock %}
+
+{% block extra_css %}
+<style>
+    .cases-page {
+        background: linear-gradient(165deg, #fff8ef 0%, #ffe8cf 55%, #ffd7b3 100%);
+        border-radius: 24px;
+        border: 1px solid rgba(200, 108, 37, 0.24);
+        padding: 2rem;
+        box-shadow: 0 16px 36px rgba(176, 96, 36, 0.14);
+    }
+
+    .cases-hero {
+        border-radius: 20px;
+        background: linear-gradient(132deg, #ffce9c 0%, #ffb376 50%, #f28d46 100%);
+        padding: 1.5rem;
+        color: #4d250d;
+        border: 1px solid rgba(148, 72, 23, 0.26);
+        margin-bottom: 1.4rem;
+    }
+
+    .cases-table {
+        border-radius: 16px;
+        overflow: hidden;
+        border: 1px solid rgba(179, 91, 27, 0.22);
+    }
+
+    .cases-table thead th {
+        background: rgba(255, 194, 136, 0.45);
+        color: #6b340f;
+        font-weight: 600;
+        border-bottom: 1px solid rgba(172, 85, 25, 0.2);
+    }
+
+    .cases-table tbody tr {
+        background: rgba(255, 251, 247, 0.92);
+    }
+
+    .cases-table tbody tr:nth-child(even) {
+        background: rgba(255, 244, 233, 0.76);
+    }
+
+    .cases-table td {
+        color: #6f4f3c;
+        vertical-align: middle;
+    }
+
+    .source-link {
+        color: #8d3900;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    .source-link:hover {
+        color: #aa4a05;
+        text-decoration: underline;
+    }
+
+    .case-tip {
+        margin-top: 1rem;
+        border-radius: 14px;
+        border: 1px dashed rgba(143, 58, 0, 0.3);
+        background: rgba(255, 241, 226, 0.75);
+        padding: 0.9rem 1.1rem;
+        color: #6c4329;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="cases-page">
+    <div class="cases-hero">
+        <h3><i class="bi bi-journal-richtext"></i> 可用于知识库建设的事故案例来源（20个）</h3>
+        <p class="mb-0">以下来源以应急管理部“调查报告”栏目为主，并补充矿山、海事、民航等官方事故调查渠道，适合用于高可信度素材采集。</p>
+    </div>
+
+    <div class="table-responsive cases-table">
+        <table class="table mb-0">
+            <thead>
+                <tr>
+                    <th style="width: 6rem;">序号</th>
+                    <th style="width: 30%;">来源</th>
+                    <th>简要介绍</th>
+                    <th style="width: 18%;">访问</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>01</td>
+                    <td>应急管理部·调查报告总入口</td>
+                    <td>覆盖多年重大、特别重大事故调查报告，适合作为主数据源。</td>
+                    <td><a class="source-link" href="https://www.mem.gov.cn/gk/sgcc/tbzdsgdcbg/" target="_blank" rel="noopener noreferrer">打开网站</a></td>
+                </tr>
+                <tr>
+                    <td>02</td>
+                    <td>江苏响水“3·21”爆炸事故报告</td>
+                    <td>典型化工爆炸案例，包含事故原因、责任认定与整改建议。</td>
+                    <td><a class="source-link" href="https://www.mem.gov.cn/gk/sgcc/tbzdsgdcbg/2019tbzdsgcc/201911/P020191115565111829069.pdf" target="_blank" rel="noopener noreferrer">打开网站</a></td>
+                </tr>
+                <tr>
+                    <td>03</td>
+                    <td>天津港“8·12”火灾爆炸事故报告</td>
+                    <td>危化仓储与港口安全领域核心案例，适用于火灾爆炸专题训练。</td>
+                    <td><a class="source-link" href="https://www.mem.gov.cn/gk/sgcc/tbzdsgdcbg/2016/201602/P020190415543917598002.pdf" target="_blank" rel="noopener noreferrer">打开网站</a></td>
+                </tr>
+                <tr>
+                    <td>04</td>
+                    <td>郑州“7·20”特大暴雨灾害报告</td>
+                    <td>适合补充应急处置与城市综合风险治理类知识。</td>
+                    <td><a class="source-link" href="https://www.mem.gov.cn/gk/sgcc/tbzdsgdcbg/202201/P020220121639049697767.pdf" target="_blank" rel="noopener noreferrer">打开网站</a></td>
+                </tr>
+                <tr>
+                    <td>05</td>
+                    <td>银川“6·21”燃气爆炸事故报告</td>
+                    <td>涉及餐饮燃气安全、监管协同与应急响应机制。</td>
+                    <td><a class="source-link" href="https://www.mem.gov.cn/xw/bndt/202401/W020240127624471254400.pdf" target="_blank" rel="noopener noreferrer">打开网站</a></td>
+                </tr>
+                <tr>
+                    <td>06</td>
+                    <td>昆山“8·2”粉尘爆炸事故报告</td>
+                    <td>工贸企业粉尘防爆经典案例，适合构建事故机理问答语料。</td>
+                    <td><a class="source-link" href="https://www.mem.gov.cn/gk/sgcc/tbzdsgdcbg/2014/201412/t20141230_245223.shtml" target="_blank" rel="noopener noreferrer">打开网站</a></td>
+                </tr>
+                <tr>
+                    <td>07</td>
+                    <td>“7·23”甬温线铁路事故报告</td>
+                    <td>适合作为公共交通重大事故治理与复盘分析素材。</td>
+                    <td><a class="source-link" href="https://www.mem.gov.cn/gk/sgcc/tbzdsgdcbg/2011/201112/t20111228_245242.shtml" target="_blank" rel="noopener noreferrer">打开网站</a></td>
+                </tr>
+                <tr>
+                    <td>08</td>
+                    <td>中国海事局·事故调查报告</td>
+                    <td>聚焦船舶碰撞、搁浅等事故，补充跨行业事故案例维度。</td>
+                    <td><a class="source-link" href="https://www.msa.gov.cn/page/channelArticles.do?channelids=010F4B91-F837-4B08-9CBA-AA49B6911631" target="_blank" rel="noopener noreferrer">打开网站</a></td>
+                </tr>
+                <tr>
+                    <td>09</td>
+                    <td>国家矿山安全监察局·事故查处</td>
+                    <td>包含煤矿与非煤矿山事故查处公开信息，适合风险规则提炼。</td>
+                    <td><a class="source-link" href="https://www.chinamine-safety.gov.cn/zfxxgk/fdzdgknr/sgcc/" target="_blank" rel="noopener noreferrer">打开网站</a></td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>民航局·MU5735事故初步报告</td>
+                    <td>民航重大事故调查公开信息，可用于高风险行业应急对比学习。</td>
+                    <td><a class="source-link" href="https://www.caac.gov.cn/XXGK/XXGK/TZTG/202204/t20220420_212895.html" target="_blank" rel="noopener noreferrer">打开网站</a></td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>应急管理部·2025调查报告栏目</td>
+                    <td>包含最新年度整改评估与特别重大事故后评估信息，适合跟踪治理闭环。</td>
+                    <td><a class="source-link" href="https://www.mem.gov.cn/gk/sgcc/tbzdsgdcbg/2025dcbg_6344/" target="_blank" rel="noopener noreferrer">打开网站</a></td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>应急管理部·2024调查报告栏目</td>
+                    <td>覆盖燃气爆炸、房屋倒塌等多类事故，可构建跨事故类型语料。</td>
+                    <td><a class="source-link" href="https://www.mem.gov.cn/gk/sgcc/tbzdsgdcbg/2024dcbg/" target="_blank" rel="noopener noreferrer">打开网站</a></td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>应急管理部·2023调查报告栏目</td>
+                    <td>含医院火灾、煤矿坍塌、商贸火灾等案例，适用于复杂事故链路分析。</td>
+                    <td><a class="source-link" href="https://www.mem.gov.cn/gk/sgcc/tbzdsgdcbg/2023dcbg_5532/" target="_blank" rel="noopener noreferrer">打开网站</a></td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>应急管理部·2022调查报告栏目</td>
+                    <td>可用于提取事故责任分配模式与企业安全管理缺陷共性。</td>
+                    <td><a class="source-link" href="https://www.mem.gov.cn/gk/sgcc/tbzdsgdcbg/2022dcbg/" target="_blank" rel="noopener noreferrer">打开网站</a></td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>应急管理部·2021调查报告栏目</td>
+                    <td>适合补充历史事故样本，支持纵向年份对比与问答稳健性训练。</td>
+                    <td><a class="source-link" href="https://www.mem.gov.cn/gk/sgcc/tbzdsgdcbg/2021/" target="_blank" rel="noopener noreferrer">打开网站</a></td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>应急管理部·2020调查报告栏目</td>
+                    <td>涵盖交通、工贸等事故类型，可用于高频场景知识检索补齐。</td>
+                    <td><a class="source-link" href="https://www.mem.gov.cn/gk/sgcc/tbzdsgdcbg/2020/" target="_blank" rel="noopener noreferrer">打开网站</a></td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>应急管理部·2018调查报告栏目</td>
+                    <td>支持老旧事故规则提取，用于构建“长期共性隐患”知识标签。</td>
+                    <td><a class="source-link" href="https://www.mem.gov.cn/gk/sgcc/tbzdsgdcbg/2018/" target="_blank" rel="noopener noreferrer">打开网站</a></td>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td>应急管理部·2017调查报告栏目</td>
+                    <td>包含矿山、施工安全等领域典型案例，适合多行业扩展训练。</td>
+                    <td><a class="source-link" href="https://www.mem.gov.cn/gk/sgcc/tbzdsgdcbg/2017/" target="_blank" rel="noopener noreferrer">打开网站</a></td>
+                </tr>
+                <tr>
+                    <td>19</td>
+                    <td>应急管理部·2016调查报告栏目</td>
+                    <td>可用于补齐早期重大事故教训，提升系统对历史语境的理解能力。</td>
+                    <td><a class="source-link" href="https://www.mem.gov.cn/gk/sgcc/tbzdsgdcbg/2016/" target="_blank" rel="noopener noreferrer">打开网站</a></td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td>应急管理部·2015调查报告栏目</td>
+                    <td>有助于构建长期演化视角，支撑“事故类型—治理措施”对照分析。</td>
+                    <td><a class="source-link" href="https://www.mem.gov.cn/gk/sgcc/tbzdsgdcbg/2015/" target="_blank" rel="noopener noreferrer">打开网站</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="case-tip">
+        <strong><i class="bi bi-lightbulb"></i> 使用建议：</strong>
+        优先采集公开调查报告正文与附录，按“事故类型-直接原因-管理原因-整改措施”统一标签入库，便于后续检索和问答引用。
+    </div>
+</div>
+{% endblock %}

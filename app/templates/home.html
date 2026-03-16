@@ -1,0 +1,356 @@
+{% extends "base.html" %}
+
+{% block title %}首页 - 知识问答库（火灾）问答系统{% endblock %}
+
+{% block header_title %}首页{% endblock %}
+
+{% block extra_css %}
+<style>
+    .home {
+        padding: 0.75rem;
+    }
+
+    .home-shell {
+        border-radius: 24px;
+        border: 1px solid rgba(255, 184, 108, 0.35);
+        background: linear-gradient(160deg, #fff8ef 0%, #ffe7cc 45%, #ffd9b3 100%);
+        box-shadow: 0 14px 36px rgba(194, 103, 32, 0.16);
+        padding: 2rem;
+    }
+
+    .home-hero-card {
+        border-radius: 22px;
+        border: 1px solid rgba(255, 173, 96, 0.35);
+        overflow: hidden;
+        box-shadow: 0 18px 32px rgba(198, 106, 40, 0.2);
+    }
+
+    .home-hero-card .card-body {
+        background: linear-gradient(130deg, #ffcf9e 0%, #ffae6f 52%, #f38b44 100%);
+        color: #3b2313;
+    }
+
+    .home-hero-card .display-5 {
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        margin-bottom: 0.75rem;
+    }
+
+    .home-hero-card .lead {
+        font-weight: 600;
+        color: rgba(70, 37, 18, 0.92);
+    }
+
+    .hero-desc {
+        color: rgba(70, 37, 18, 0.86);
+        max-width: 750px;
+        margin: 0 auto 1.5rem;
+    }
+
+    .hero-fireline {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+        border-radius: 999px;
+        padding: 0.3rem 0.95rem;
+        background: rgba(255, 241, 225, 0.5);
+        border: 1px solid rgba(130, 67, 21, 0.18);
+        font-size: 0.88rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero-fireline i {
+        color: #cf4e00;
+    }
+
+    .home-hero-card .btn-primary,
+    .home-hero-card .btn-outline-primary {
+        padding: 0.72rem 1.8rem;
+        font-weight: 600;
+        border-radius: 12px;
+        transition: all 0.3s ease;
+    }
+
+    .home-hero-card .btn-primary {
+        background: #8f3a00;
+        color: #fff8f0;
+        border: 1px solid #8f3a00;
+    }
+
+    .home-hero-card .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 24px rgba(92, 38, 7, 0.25);
+        background: #a84300;
+        border-color: #a84300;
+        color: #fff8f0;
+    }
+
+    .home-hero-card .btn-outline-primary {
+        background: transparent;
+        color: #6f2b00;
+        border: 1px solid rgba(111, 43, 0, 0.62);
+    }
+
+    .home-hero-card .btn-outline-primary:hover {
+        background: rgba(255, 248, 240, 0.98);
+        color: #7a3200;
+        border-color: #7a3200;
+        transform: translateY(-2px);
+    }
+
+    .feature-link {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+        height: 100%;
+    }
+
+    .feature-card {
+        border-radius: 18px;
+        border: 1px solid rgba(201, 117, 44, 0.2);
+        box-shadow: 0 6px 14px rgba(127, 72, 32, 0.08);
+        transition: all 0.3s ease;
+        overflow: hidden;
+        background: rgba(255, 250, 245, 0.86);
+    }
+
+    .feature-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 16px 28px rgba(177, 86, 24, 0.2);
+        border-color: rgba(187, 80, 18, 0.35);
+    }
+
+    .feature-card .card-body {
+        padding: 1.8rem 1.5rem;
+    }
+
+    .feature-icon {
+        width: 66px;
+        height: 66px;
+        margin: 0 auto 1rem;
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.85rem;
+        color: #8f3a00;
+        background: linear-gradient(140deg, rgba(255, 193, 131, 0.42), rgba(255, 149, 77, 0.2));
+        border: 1px solid rgba(193, 100, 31, 0.2);
+        transition: all 0.3s ease;
+    }
+
+    .feature-card:hover .feature-icon {
+        transform: scale(1.06);
+        background: linear-gradient(140deg, rgba(255, 173, 96, 0.45), rgba(245, 120, 43, 0.25));
+    }
+
+    .feature-card .card-title {
+        font-weight: 600;
+        color: #4d290f;
+        margin-bottom: 0.85rem;
+    }
+
+    .feature-card .card-text {
+        color: #72513f;
+        margin-bottom: 1rem;
+        min-height: 54px;
+    }
+
+    .feature-tag {
+        display: inline-flex;
+        gap: 0.35rem;
+        align-items: center;
+        border-radius: 999px;
+        padding: 0.3rem 0.75rem;
+        background: rgba(255, 224, 198, 0.62);
+        color: #7c3500;
+        font-size: 0.78rem;
+        font-weight: 600;
+    }
+
+    .home-guide {
+        border-radius: 18px;
+        border: 1px dashed rgba(173, 83, 20, 0.32);
+        background: rgba(255, 245, 233, 0.72);
+        padding: 1.4rem 1.45rem;
+    }
+
+    .home-guide h5 {
+        font-weight: 600;
+        color: #64300f;
+    }
+
+    .home-guide p {
+        margin-bottom: 0;
+        color: #7a543c;
+    }
+
+    @media (max-width: 768px) {
+        .home {
+            padding: 0.2rem;
+        }
+
+        .home-shell {
+            padding: 1.2rem;
+        }
+
+        .home-hero-card .display-5 {
+            font-size: 1.85rem;
+        }
+
+        .home-hero-card .btn-primary,
+        .home-hero-card .btn-outline-primary {
+            width: 100%;
+        }
+
+        .feature-card .card-body {
+            padding: 1.5rem;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+{% if not current_user %}
+<div class="alert alert-info mb-4" role="alert">
+    <h5 class="alert-heading"><i class="bi bi-info-circle"></i> 提示</h5>
+    <p class="mb-0">访问知识库管理和聊天功能需要先 <a href="{{ url_for('auth.login') }}" class="alert-link">登录</a> 或 <a href="{{ url_for('auth.register') }}" class="alert-link">注册</a>。</p>
+</div>
+{% endif %}
+<div class="home row">
+    <div class="col-12">
+        <div class="home-shell">
+            <div class="card mb-4 home-hero-card">
+                <div class="card-body text-center py-5">
+                    <div class="hero-fireline">
+                        <i class="bi bi-fire"></i>
+                        <span>火灾事故知识研判</span>
+                    </div>
+                    <h1 class="display-5">
+                        <i class="bi bi-shield-fire"></i> 知识问答库（火灾）问答系统
+                    </h1>
+                    <p class="lead mb-2">
+                        面向事故复盘、风险洞察与应急培训的智能平台
+                    </p>
+                    <p class="hero-desc">
+                        通过知识库管理、智能检索与问答生成联动，帮助团队快速整合火灾事故资料，形成可复用的分析能力与决策支持。
+                    </p>
+                    <div class="d-flex justify-content-center gap-3 flex-wrap">
+                        <a href="/kb" class="btn btn-primary btn-lg">
+                            <i class="bi bi-collection"></i> 进入文档管理
+                        </a>
+                        <a href="/chat" class="btn btn-outline-primary btn-lg">
+                            <i class="bi bi-chat-dots"></i> 进入智能问答
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-4">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <a href="/kb" class="feature-link">
+                        <div class="card h-100 feature-card">
+                            <div class="card-body text-center">
+                                <div class="feature-icon">
+                                    <i class="bi bi-folder2-open"></i>
+                                </div>
+                                <h5 class="card-title">文档管理</h5>
+                                <p class="card-text">
+                                    上传并维护 PDF、DOCX、TXT、MD 等事故资料，构建结构化知识源。
+                                </p>
+                                <span class="feature-tag"><i class="bi bi-arrow-right-circle"></i> 点击进入</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <a href="/settings" class="feature-link">
+                        <div class="card h-100 feature-card">
+                            <div class="card-body text-center">
+                                <div class="feature-icon">
+                                    <i class="bi bi-radar"></i>
+                                </div>
+                                <h5 class="card-title">智能检索</h5>
+                                <p class="card-text">
+                                    配置召回数量、重排与分块策略，优化事故案例定位与证据提取效果。
+                                </p>
+                                <span class="feature-tag"><i class="bi bi-arrow-right-circle"></i> 点击进入</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <a href="/chat" class="feature-link">
+                        <div class="card h-100 feature-card">
+                            <div class="card-body text-center">
+                                <div class="feature-icon">
+                                    <i class="bi bi-chat-square-dots"></i>
+                                </div>
+                                <h5 class="card-title">智能问答</h5>
+                                <p class="card-text">
+                                    基于检索增强生成进行多轮问答，输出可追溯的事故分析结论与建议。
+                                </p>
+                                <span class="feature-tag"><i class="bi bi-arrow-right-circle"></i> 点击进入</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <a href="{{ url_for('auth.fire_analytics') }}" class="feature-link">
+                        <div class="card h-100 feature-card">
+                            <div class="card-body text-center">
+                                <div class="feature-icon">
+                                    <i class="bi bi-graph-up-arrow"></i>
+                                </div>
+                                <h5 class="card-title">数据分析</h5>
+                                <p class="card-text">
+                                    查看真实火灾统计图表，洞察火灾数量、过火面积与人员伤亡趋势变化。
+                                </p>
+                                <span class="feature-tag"><i class="bi bi-arrow-right-circle"></i> 点击进入</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <a href="{{ url_for('auth.system_principle') }}" class="feature-link">
+                        <div class="card h-100 feature-card">
+                            <div class="card-body text-center">
+                                <div class="feature-icon">
+                                    <i class="bi bi-diagram-3"></i>
+                                </div>
+                                <h5 class="card-title">系统工作原理</h5>
+                                <p class="card-text">
+                                    查看从文档采集到问答生成的全流程机制，理解系统如何完成火灾知识推理。
+                                </p>
+                                <span class="feature-tag"><i class="bi bi-arrow-right-circle"></i> 点击进入</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <a href="{{ url_for('auth.accident_cases') }}" class="feature-link">
+                        <div class="card h-100 feature-card">
+                            <div class="card-body text-center">
+                                <div class="feature-icon">
+                                    <i class="bi bi-journal-richtext"></i>
+                                </div>
+                                <h5 class="card-title">事故案例素材</h5>
+                                <p class="card-text">
+                                    提供 20 个事故案例来源站点，便于扩充知识库并持续沉淀行业实践经验。
+                                </p>
+                                <span class="feature-tag"><i class="bi bi-arrow-right-circle"></i> 点击进入</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="home-guide">
+                <h5><i class="bi bi-stars"></i> 平台定位</h5>
+                <p>系统聚焦火灾及相关事故知识的检索、问答与复盘应用，适用于培训演练、技术复盘和风险排查场景。</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

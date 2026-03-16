@@ -1,0 +1,471 @@
+{% extends "base.html" %}
+
+{% block title %}数据分析 - 知识问答库（火灾）问答系统{% endblock %}
+
+{% block header_title %}数据分析{% endblock %}
+
+{% block extra_css %}
+<style>
+    .analytics-page {
+        background: linear-gradient(165deg, #fff8ef 0%, #ffe8ce 52%, #ffd7b0 100%);
+        border-radius: 24px;
+        border: 1px solid rgba(206, 109, 36, 0.24);
+        padding: 1.6rem;
+        box-shadow: 0 16px 36px rgba(176, 96, 36, 0.14);
+    }
+
+    .analytics-hero {
+        border-radius: 18px;
+        background: linear-gradient(132deg, #ffce9c 0%, #ffb274 48%, #f18b45 100%);
+        padding: 1.2rem 1.3rem;
+        color: #4d250d;
+        border: 1px solid rgba(148, 72, 23, 0.26);
+        margin-bottom: 1rem;
+    }
+
+    .analytics-hero h3 {
+        margin-bottom: 0.4rem;
+        font-weight: 700;
+    }
+
+    .analytics-hero p {
+        margin-bottom: 0;
+        color: rgba(73, 35, 13, 0.92);
+    }
+
+    .data-tag {
+        margin-top: 0.7rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+        background: rgba(255, 245, 234, 0.62);
+        border: 1px solid rgba(152, 75, 23, 0.22);
+        border-radius: 999px;
+        padding: 0.3rem 0.75rem;
+        color: #6d320f;
+        font-size: 0.82rem;
+    }
+
+    .chart-card {
+        border-radius: 18px;
+        border: 1px solid rgba(194, 103, 33, 0.25);
+        background: rgba(255, 250, 244, 0.95);
+        box-shadow: 0 8px 20px rgba(153, 81, 29, 0.1);
+        height: 100%;
+    }
+
+    .chart-card .card-body {
+        padding: 1rem 1rem 0.8rem;
+    }
+
+    .chart-title {
+        color: #5d2d10;
+        font-weight: 700;
+        margin-bottom: 0.2rem;
+        font-size: 1rem;
+    }
+
+    .chart-subtitle {
+        color: #7a543c;
+        font-size: 0.84rem;
+        margin-bottom: 0.7rem;
+    }
+
+    .chart-wrap {
+        position: relative;
+        height: 280px;
+        border-radius: 12px;
+        background: rgba(255, 254, 252, 0.92);
+        border: 1px solid rgba(201, 117, 44, 0.16);
+        overflow: hidden;
+    }
+
+    .source-panel {
+        margin-top: 1rem;
+        border-radius: 16px;
+        border: 1px dashed rgba(149, 65, 9, 0.35);
+        background: rgba(255, 240, 220, 0.75);
+        padding: 0.9rem 1rem;
+    }
+
+    .source-panel h6 {
+        color: #6a300f;
+        margin-bottom: 0.5rem;
+        font-weight: 700;
+    }
+
+    .source-panel a {
+        color: #8e3900;
+        text-decoration: none;
+        font-weight: 600;
+        margin-right: 0.85rem;
+    }
+
+    .source-panel a:hover {
+        text-decoration: underline;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="analytics-page">
+    <div class="analytics-hero">
+        <h3><i class="bi bi-graph-up-arrow"></i> 火灾与野火数据分析看板</h3>
+        <p>图表基于公开数据源构建，展示中国和全球火灾相关统计变化，支持风险研判与知识库素材筛选。</p>
+        <div class="data-tag">
+            <i class="bi bi-database-check"></i>
+            <span>数据更新时间：按公开数据源最新发布版本同步</span>
+        </div>
+    </div>
+
+    <div class="row g-3">
+        <div class="col-lg-6">
+            <div class="card chart-card">
+                <div class="card-body">
+                    <div class="chart-title">图1 中国年度野火数量（2014-2025）</div>
+                    <div class="chart-subtitle">单位：起（Annual number of fires）</div>
+                    <div class="chart-wrap" id="chart1"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="card chart-card">
+                <div class="card-body">
+                    <div class="chart-title">图2 中国年度过火面积（2014-2025）</div>
+                    <div class="chart-subtitle">单位：公顷（Annual area burnt by wildfires）</div>
+                    <div class="chart-wrap" id="chart2"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="card chart-card">
+                <div class="card-body">
+                    <div class="chart-title">图3 中国单次野火平均过火面积（2014-2025）</div>
+                    <div class="chart-subtitle">单位：公顷/起（Annual area burnt per wildfire）</div>
+                    <div class="chart-wrap" id="chart3"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="card chart-card">
+                <div class="card-body">
+                    <div class="chart-title">图4 全球年度野火数量（2014-2025）</div>
+                    <div class="chart-subtitle">单位：起（World annual number of fires）</div>
+                    <div class="chart-wrap" id="chart4"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="card chart-card">
+                <div class="card-body">
+                    <div class="chart-title">图5 中国火灾死亡人数与每10万人死亡率（2000-2021）</div>
+                    <div class="chart-subtitle">死亡率由 WHO 火灾死亡人数与人口数据计算</div>
+                    <div class="chart-wrap" id="chart5"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="card chart-card">
+                <div class="card-body">
+                    <div class="chart-title">图6 主要国家野火数量对比（2025）</div>
+                    <div class="chart-subtitle">国家：巴西、澳大利亚、美国、印度、俄罗斯、中国、加拿大、南非</div>
+                    <div class="chart-wrap" id="chart6"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="source-panel">
+        <h6><i class="bi bi-link-45deg"></i> 数据来源</h6>
+        <a href="https://ourworldindata.org/grapher/annual-number-of-fires" target="_blank" rel="noopener noreferrer">Annual number of fires</a>
+        <a href="https://ourworldindata.org/grapher/annual-area-burnt-by-wildfires" target="_blank" rel="noopener noreferrer">Annual area burnt by wildfires</a>
+        <a href="https://ourworldindata.org/grapher/annual-area-burnt-per-wildfire" target="_blank" rel="noopener noreferrer">Annual area burnt per wildfire</a>
+        <a href="https://ourworldindata.org/grapher/deaths-from-fires-and-burns-who" target="_blank" rel="noopener noreferrer">Deaths from fires and burns (WHO)</a>
+        <a href="https://ourworldindata.org/grapher/population" target="_blank" rel="noopener noreferrer">Population</a>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    const yearsWildfire = [2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025];
+    const chinaFires = [19183, 15761, 10221, 13453, 6719, 9658, 9284, 8486, 9006, 8619, 9399, 11758];
+    const chinaBurntArea = [5535360, 4716652, 2687853, 3826106, 1443706, 2680905, 3030089, 2566827, 2530514, 2697242, 2844021, 5241397];
+    const chinaAvgBurnt = [288.56, 299.26, 262.97, 284.41, 214.87, 277.58, 326.38, 302.48, 280.98, 312.94, 302.59, 445.77];
+    const worldFires = [948416, 1016417, 970983, 928097, 811680, 916079, 955956, 892620, 873061, 884762, 841474, 798514];
+    const deathYears = [2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021];
+    const deathCount = [11888, 10759, 10734, 11753, 12583, 12594, 11936, 11683, 11339, 11600, 11567, 11271, 10897, 10801, 10568, 10522, 10495, 10486, 10363, 10330, 10371, 10424];
+    const deathRate = [0.9364, 0.8414, 0.8342, 0.9079, 0.9663, 0.9614, 0.9056, 0.8812, 0.8501, 0.864, 0.8559, 0.8286, 0.7957, 0.7832, 0.7614, 0.7537, 0.7475, 0.7424, 0.7303, 0.7257, 0.7272, 0.7308];
+    const countryLabels = ["Brazil", "Australia", "United States", "India", "Russia", "China", "Canada", "South Africa"];
+    const countryFires2025 = [43858, 40704, 23095, 16774, 13808, 11758, 8631, 5810];
+
+    const numberFormatter = new Intl.NumberFormat('zh-CN');
+
+    function svgBase(container) {
+        const width = Math.max(container.clientWidth, 320);
+        const height = Math.max(container.clientHeight, 220);
+        const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+        svg.setAttribute('width', width);
+        svg.setAttribute('height', height);
+        svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
+        svg.style.display = 'block';
+        svg.style.width = '100%';
+        svg.style.height = '100%';
+        container.innerHTML = '';
+        container.appendChild(svg);
+        return { svg, width, height };
+    }
+
+    function maxVal(values) {
+        return Math.max(...values.filter(v => Number.isFinite(v)));
+    }
+
+    function minVal(values) {
+        return Math.min(...values.filter(v => Number.isFinite(v)));
+    }
+
+    function createLineChart(containerId, labels, values, lineColor, fillColor) {
+        const el = document.getElementById(containerId);
+        const { svg, width, height } = svgBase(el);
+        const p = { left: 48, right: 14, top: 16, bottom: 34 };
+        const w = width - p.left - p.right;
+        const h = height - p.top - p.bottom;
+        const vMax = maxVal(values) * 1.08;
+        const vMin = 0;
+
+        for (let i = 0; i <= 4; i++) {
+            const y = p.top + (h / 4) * i;
+            const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+            line.setAttribute('x1', p.left);
+            line.setAttribute('x2', p.left + w);
+            line.setAttribute('y1', y);
+            line.setAttribute('y2', y);
+            line.setAttribute('stroke', 'rgba(130, 76, 37, 0.14)');
+            svg.appendChild(line);
+            const label = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+            label.setAttribute('x', 4);
+            label.setAttribute('y', y + 4);
+            label.setAttribute('font-size', '11');
+            label.setAttribute('fill', '#80573e');
+            label.textContent = numberFormatter.format(Math.round(vMax - (vMax - vMin) * (i / 4)));
+            svg.appendChild(label);
+        }
+
+        const points = values.map((v, i) => {
+            const x = p.left + (w * i) / (values.length - 1);
+            const y = p.top + h - ((v - vMin) / (vMax - vMin)) * h;
+            return { x, y };
+        });
+
+        const areaPath = [`M ${points[0].x} ${p.top + h}`];
+        points.forEach(pt => areaPath.push(`L ${pt.x} ${pt.y}`));
+        areaPath.push(`L ${points[points.length - 1].x} ${p.top + h} Z`);
+        const area = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        area.setAttribute('d', areaPath.join(' '));
+        area.setAttribute('fill', fillColor);
+        svg.appendChild(area);
+
+        const path = document.createElementNS('http://www.w3.org/2000/svg', 'polyline');
+        path.setAttribute('fill', 'none');
+        path.setAttribute('stroke', lineColor);
+        path.setAttribute('stroke-width', '2.4');
+        path.setAttribute('points', points.map(pt => `${pt.x},${pt.y}`).join(' '));
+        svg.appendChild(path);
+
+        points.forEach((pt, i) => {
+            if (i % 2 === 0 || i === points.length - 1) {
+                const dot = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+                dot.setAttribute('cx', pt.x);
+                dot.setAttribute('cy', pt.y);
+                dot.setAttribute('r', 2.7);
+                dot.setAttribute('fill', lineColor);
+                svg.appendChild(dot);
+            }
+            if (i % 2 === 0 || i === points.length - 1) {
+                const xLabel = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+                xLabel.setAttribute('x', pt.x);
+                xLabel.setAttribute('y', p.top + h + 18);
+                xLabel.setAttribute('text-anchor', 'middle');
+                xLabel.setAttribute('font-size', '10');
+                xLabel.setAttribute('fill', '#80573e');
+                xLabel.textContent = labels[i];
+                svg.appendChild(xLabel);
+            }
+        });
+    }
+
+    function createBarChart(containerId, labels, values, color) {
+        const el = document.getElementById(containerId);
+        const { svg, width, height } = svgBase(el);
+        const p = { left: 48, right: 12, top: 16, bottom: 34 };
+        const w = width - p.left - p.right;
+        const h = height - p.top - p.bottom;
+        const vMax = maxVal(values) * 1.1;
+        const barWidth = w / values.length * 0.64;
+
+        for (let i = 0; i <= 4; i++) {
+            const y = p.top + (h / 4) * i;
+            const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+            line.setAttribute('x1', p.left);
+            line.setAttribute('x2', p.left + w);
+            line.setAttribute('y1', y);
+            line.setAttribute('y2', y);
+            line.setAttribute('stroke', 'rgba(130, 76, 37, 0.14)');
+            svg.appendChild(line);
+        }
+
+        values.forEach((v, i) => {
+            const x = p.left + (w * i) / values.length + (w / values.length - barWidth) / 2;
+            const y = p.top + h - (v / vMax) * h;
+            const rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+            rect.setAttribute('x', x);
+            rect.setAttribute('y', y);
+            rect.setAttribute('width', barWidth);
+            rect.setAttribute('height', Math.max(1, p.top + h - y));
+            rect.setAttribute('rx', 3);
+            rect.setAttribute('fill', color);
+            svg.appendChild(rect);
+            if (i % 2 === 0 || i === values.length - 1) {
+                const xLabel = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+                xLabel.setAttribute('x', x + barWidth / 2);
+                xLabel.setAttribute('y', p.top + h + 18);
+                xLabel.setAttribute('text-anchor', 'middle');
+                xLabel.setAttribute('font-size', '10');
+                xLabel.setAttribute('fill', '#80573e');
+                xLabel.textContent = labels[i];
+                svg.appendChild(xLabel);
+            }
+        });
+    }
+
+    function createDualChart(containerId, labels, bars, lineVals) {
+        const el = document.getElementById(containerId);
+        const { svg, width, height } = svgBase(el);
+        const p = { left: 48, right: 42, top: 16, bottom: 34 };
+        const w = width - p.left - p.right;
+        const h = height - p.top - p.bottom;
+        const barMax = maxVal(bars) * 1.08;
+        const lineMin = minVal(lineVals) * 0.95;
+        const lineMax = maxVal(lineVals) * 1.05;
+        const barWidth = w / bars.length * 0.58;
+
+        for (let i = 0; i <= 4; i++) {
+            const y = p.top + (h / 4) * i;
+            const gLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+            gLine.setAttribute('x1', p.left);
+            gLine.setAttribute('x2', p.left + w);
+            gLine.setAttribute('y1', y);
+            gLine.setAttribute('y2', y);
+            gLine.setAttribute('stroke', 'rgba(130, 76, 37, 0.14)');
+            svg.appendChild(gLine);
+        }
+
+        bars.forEach((v, i) => {
+            const x = p.left + (w * i) / bars.length + (w / bars.length - barWidth) / 2;
+            const y = p.top + h - (v / barMax) * h;
+            const rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+            rect.setAttribute('x', x);
+            rect.setAttribute('y', y);
+            rect.setAttribute('width', barWidth);
+            rect.setAttribute('height', Math.max(1, p.top + h - y));
+            rect.setAttribute('rx', 2.5);
+            rect.setAttribute('fill', 'rgba(238, 142, 74, 0.7)');
+            svg.appendChild(rect);
+            if (i % 3 === 0 || i === bars.length - 1) {
+                const xLabel = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+                xLabel.setAttribute('x', x + barWidth / 2);
+                xLabel.setAttribute('y', p.top + h + 18);
+                xLabel.setAttribute('text-anchor', 'middle');
+                xLabel.setAttribute('font-size', '9.6');
+                xLabel.setAttribute('fill', '#80573e');
+                xLabel.textContent = labels[i];
+                svg.appendChild(xLabel);
+            }
+        });
+
+        const points = lineVals.map((v, i) => {
+            const x = p.left + (w * i) / (lineVals.length - 1);
+            const y = p.top + h - ((v - lineMin) / (lineMax - lineMin)) * h;
+            return { x, y };
+        });
+        const path = document.createElementNS('http://www.w3.org/2000/svg', 'polyline');
+        path.setAttribute('fill', 'none');
+        path.setAttribute('stroke', '#8b2600');
+        path.setAttribute('stroke-width', '2');
+        path.setAttribute('points', points.map(pt => `${pt.x},${pt.y}`).join(' '));
+        svg.appendChild(path);
+        points.forEach(pt => {
+            const dot = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+            dot.setAttribute('cx', pt.x);
+            dot.setAttribute('cy', pt.y);
+            dot.setAttribute('r', 2.2);
+            dot.setAttribute('fill', '#8b2600');
+            svg.appendChild(dot);
+        });
+    }
+
+    function createHorizontalBarChart(containerId, labels, values, colors) {
+        const el = document.getElementById(containerId);
+        const { svg, width, height } = svgBase(el);
+        const p = { left: 110, right: 18, top: 14, bottom: 14 };
+        const w = width - p.left - p.right;
+        const h = height - p.top - p.bottom;
+        const maxV = maxVal(values) * 1.12;
+        const rowH = h / labels.length;
+
+        for (let i = 0; i <= 4; i++) {
+            const x = p.left + (w / 4) * i;
+            const grid = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+            grid.setAttribute('x1', x);
+            grid.setAttribute('x2', x);
+            grid.setAttribute('y1', p.top);
+            grid.setAttribute('y2', p.top + h);
+            grid.setAttribute('stroke', 'rgba(130, 76, 37, 0.12)');
+            svg.appendChild(grid);
+        }
+
+        labels.forEach((name, i) => {
+            const y = p.top + i * rowH + rowH * 0.2;
+            const barH = rowH * 0.6;
+            const bw = (values[i] / maxV) * w;
+            const rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+            rect.setAttribute('x', p.left);
+            rect.setAttribute('y', y);
+            rect.setAttribute('width', bw);
+            rect.setAttribute('height', barH);
+            rect.setAttribute('rx', 4);
+            rect.setAttribute('fill', colors[i % colors.length]);
+            svg.appendChild(rect);
+
+            const label = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+            label.setAttribute('x', p.left - 8);
+            label.setAttribute('y', y + barH * 0.72);
+            label.setAttribute('text-anchor', 'end');
+            label.setAttribute('font-size', '10.5');
+            label.setAttribute('fill', '#78513b');
+            label.textContent = name;
+            svg.appendChild(label);
+
+            const valText = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+            valText.setAttribute('x', p.left + bw + 5);
+            valText.setAttribute('y', y + barH * 0.72);
+            valText.setAttribute('font-size', '10.2');
+            valText.setAttribute('fill', '#6f3b1e');
+            valText.textContent = numberFormatter.format(values[i]);
+            svg.appendChild(valText);
+        });
+    }
+
+    function drawAllCharts() {
+        createLineChart('chart1', yearsWildfire, chinaFires, '#b64900', 'rgba(182, 73, 0, 0.14)');
+        createBarChart('chart2', yearsWildfire, chinaBurntArea, 'rgba(234, 122, 54, 0.7)');
+        createLineChart('chart3', yearsWildfire, chinaAvgBurnt, '#8b3f0a', 'rgba(139, 63, 10, 0.14)');
+        createLineChart('chart4', yearsWildfire, worldFires, '#7a2f00', 'rgba(122, 47, 0, 0.12)');
+        createDualChart('chart5', deathYears, deathCount, deathRate);
+        createHorizontalBarChart('chart6', countryLabels, countryFires2025, ['#cd5a1f', '#d96d2e', '#e27f3b', '#eb9150', '#f1a565', '#f6b87d', '#f8c795', '#fad6ad']);
+    }
+
+    window.addEventListener('load', drawAllCharts);
+    window.addEventListener('resize', drawAllCharts);
+</script>
+{% endblock %}
